@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Avatar() {
   const avatarUrl =
-    'https://secure.gravatar.com/avatar/3d6f5d17df19913a7a7970923563710e'
+    'https://secure.gravatar.com/avatar/3d6f5d17df19913a7a7970923563710e?s=256'
 
   return (
     <div className='Avatar'>
