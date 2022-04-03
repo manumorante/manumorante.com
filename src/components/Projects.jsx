@@ -8,7 +8,7 @@ export default function Projects({ data }) {
       {projects.map((item) => (
         <li key={item.name}>
           <a
-            className='py-6 block hover:bg-white dark:hover:bg-neutral-900/50 transition-colors'
+            className='py-6 block'
             href={item.url}
             target='blank'>
             <div className='flex flex-col gap-2'>
