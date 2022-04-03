@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import Avatar from './Avatar'
 
 export default function App() {
   useEffect(() => {
@@ -18,7 +19,7 @@ export default function App() {
   }
 
   return (
-    <div className='w-full max-w-md mx-auto '>
+    <div className='w-full max-w-md mx-auto'>
       <button onClick={toggleDarkMode} className='fixed top-6 right-6'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -36,11 +37,7 @@ export default function App() {
       </button>
       <div className='p-10 bg-white dark:bg-neutral-900 flex justify-center items-center'>
         <div className='text-center'>
-          <img
-            className='w-32 block mx-auto h-auto m-4 rounded-2xl overflow-hidden'
-            alt='Manu Morante'
-            src='https://www.gravatar.com/avatar/3d6f5d17df19913a7a7970923563710e.jpg?s=200'
-          />
+          <Avatar />
           <h1 className='text-center text-xl font-semibold'>Manu Morante</h1>
           <p className='mb-4'>Front end developer and UI designer</p>
         </div>
