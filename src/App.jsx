@@ -59,11 +59,13 @@ export default function App() {
         </div>
       </div>
 
-      <h2 className='font-thin text-xl my-6'>Proyectos</h2>
-      <Projects data={data} />
+      <section className='p-6'>
+        <h2 className='font-thin text-xl my-3'>Proyectos</h2>
+        <Projects data={data} />
 
-      <h2 className='font-thin text-xl my-6'>Social</h2>
-      <Social data={data} />
+        <h2 className='font-thin text-xl my-3'>Social</h2>
+        <Social data={data} />
+      </section>
     </div>
   )
 }

@@ -9,10 +9,10 @@ export default function Social({ data }) {
         {social.map((item) => (
           <li key={item.name}>
             <a
-              className='block p-4 hover:bg-white dark:hover:bg-neutral-900 transition-colors'
+              className='block py-4 hover:bg-white dark:hover:bg-neutral-900 transition-colors'
               href={item.url}
               target='blank'>
-              <div className='flex justify-between gap-4'>
+              <div className='flex flex-col sm:flex-row gap-2 sm:gap-4 sm:justify-between'>
                 <div className='name font-medium text-neutral-600 dark:text-neutral-200'>
                   {item.name}
                 </div>
