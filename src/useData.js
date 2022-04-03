@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 // Un simple JSON plano con las cosas que deseo mostar en mi porfolio.
 // En principio tiene listados com el de links sociales o el de proyectos.
-const DATA_PATH = '../data.json'
+const DATA_PATH = '/data.json'
 
 function parseData(data) {
   // Personal info
