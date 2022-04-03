@@ -1,21 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Avatar from './components/Avatar'
 import Projects from './components/Projects'
 import Social from './components/Social'
-import { useData } from './useData'
+import data from '../data.json'
 
 export default function App() {
-  const dataParam = useData()
-  const [data, setData] = useState(null)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    if (!dataParam) return
-
-    setData(dataParam)
-    setLoading(false)
-  }, [dataParam])
-
   useEffect(() => {
     localStorage.theme = localStorage.theme === 'light' ? 'light' : 'dark'
     document.documentElement.classList.toggle(
@@ -32,7 +21,7 @@ export default function App() {
     )
   }
 
-  if (loading) return <div>Loading...</div>
+  if (!data) return
 
   return (
     <div className='w-full max-w-md mx-auto'>
