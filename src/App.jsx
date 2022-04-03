@@ -1,7 +1,21 @@
-import React, { useEffect } from 'react'
-import Avatar from './Avatar'
+import React, { useEffect, useState } from 'react'
+import Avatar from './components/Avatar'
+import Projects from './components/Projects'
+import Social from './components/Social'
+import { useData } from './useData'
 
 export default function App() {
+  const dataParam = useData()
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    if (!dataParam) return
+
+    setData(dataParam)
+    setLoading(false)
+  }, [dataParam])
+
   useEffect(() => {
     localStorage.theme = localStorage.theme === 'light' ? 'light' : 'dark'
     document.documentElement.classList.toggle(
@@ -17,6 +31,8 @@ export default function App() {
       localStorage.theme === 'dark'
     )
   }
+
+  if (loading) return <div>Loading...</div>
 
   return (
     <div className='w-full max-w-md mx-auto'>
@@ -43,61 +59,11 @@ export default function App() {
         </div>
       </div>
 
-      <div className='p-10'>
-        <h1 className='font-bold'>Proyectos</h1>
-        <nav>
-          <ul>
-            <li>
-              <a className='block p-2' href='https://csspen.es'>
-                CSS Pen
-              </a>
-            </li>
-            <li>
-              <a className='block p-2' href='https://posters.manumorante.com'>
-                Minimalist Movie Posters
-              </a>
-            </li>
-          </ul>
-        </nav>
+      <h2 className='font-thin text-xl my-6'>Proyectos</h2>
+      <Projects data={data} />
 
-        <nav role='complementary'>
-          <h1 className='font-bold'>Social</h1>
-          <ul className=''>
-            <li>
-              <a
-                className='block p-2'
-                href='//www.linkedin.com/in/manumorante/'
-                target='blank'>
-                Linkedin
-              </a>
-            </li>
-            <li>
-              <a
-                className='block p-2'
-                href='//www.github.com/manumorante/'
-                target='blank'>
-                Github
-              </a>
-            </li>
-            <li>
-              <a
-                className='block p-2'
-                href='//www.codepen.io/manumorante/'
-                target='blank'>
-                Codepen
-              </a>
-            </li>
-            <li>
-              <a
-                className='block p-2'
-                href='//www.instagram.com/manu.morante/'
-                target='blank'>
-                Instagram
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <h2 className='font-thin text-xl my-6'>Social</h2>
+      <Social data={data} />
     </div>
   )
 }
