@@ -1,0 +1,37 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Hacker News: Active</title>
+    <link>https://news.ycombinator.com/active</link>
+    <description>Hacker News RSS</description>
+    <docs>https://hnrss.org/</docs>
+    <generator>hnrss v1.1-16-gb4aa33c</generator>
+    <lastBuildDate>Wed, 27 Apr 2022 15:33:42 +0000</lastBuildDate>
+    <atom:link href="https://hnrss.org/active?count=100" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>
+      <![CDATA[ Item 1 Velit laboris magna officia ut nisi anim veniam fugiat reprehenderit qui ]]>
+      </title>
+      <description>
+      <![CDATA[ <p>Article URL: <a href="https://www.healthcareitnews.com/news/report-90-nurses-considering-leaving-profession-next-year">https://www.healthcareitnews.com/news/report-90-nurses-considering-leaving-profession-next-year</a></p> <p>Comments URL: <a href="https://news.ycombinator.com/item?id=31180646">https://news.ycombinator.com/item?id=31180646</a></p> <p>Points: 73</p> <p># Comments: 60</p> ]]>
+      </description>
+      <pubDate>Wed, 27 Apr 2022 14:54:06 +0000</pubDate>
+      <link>https://www.healthcareitnews.com/news/report-90-nurses-considering-leaving-profession-next-year</link>
+      <dc:creator>dr_pardee</dc:creator>
+      <comments>https://news.ycombinator.com/item?id=31180646</comments>
+      <guid isPermaLink="false">https://news.ycombinator.com/item?id=31180646</guid>
+    </item>
+    <item>
+      <title>
+      <![CDATA[ Item 2 Mollit adipisicing excepteur nisi velit ullamco in eu consectetur. ]]>
+      </title>
+      <description>
+      <![CDATA[ <p>Article URL: <a href="https://www.healthcareitnews.com/news/report-90-nurses-considering-leaving-profession-next-year">https://www.healthcareitnews.com/news/report-90-nurses-considering-leaving-profession-next-year</a></p> <p>Comments URL: <a href="https://news.ycombinator.com/item?id=31180646">https://news.ycombinator.com/item?id=31180646</a></p> <p>Points: 73</p> <p># Comments: 60</p> ]]>
+      </description>
+      <pubDate>Wed, 27 Apr 2022 15:54:06 +0000</pubDate>
+      <link>https://www.healthcareitnews.com/news/report-90-nurses-considering-leaving-profession-next-year</link>
+      <dc:creator>dr_pardee</dc:creator>
+      <comments>https://news.ycombinator.com/item?id=31180646</comments>
+      <guid isPermaLink="false">https://news.ycombinator.com/item?id=31180646</guid>
+    </item>
+  </channel>
+</rss>
