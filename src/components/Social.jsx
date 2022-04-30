@@ -1,7 +1,10 @@
 import React from 'react'
+import { useMyData } from '../context/AppProvider'
 
-export default function Social({ data }) {
-  const { social } = data
+export default function Social() {
+  const { social } = useMyData()
+
+  if (!social) return null
 
   return (
     <nav className='Social' role='complementary'>

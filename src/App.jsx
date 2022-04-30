@@ -3,11 +3,8 @@ import ToggleDark from './components/ToggleDark'
 import Avatar from './components/Avatar'
 import Projects from './components/Projects'
 import Social from './components/Social'
-import data from '../data.json'
 
 export default function App() {
-  if (!data) return
-
   return (
     <div className='w-full max-w-md mx-auto'>
       <ToggleDark />
@@ -22,10 +19,10 @@ export default function App() {
 
       <section className='p-6'>
         <h2 className='font-thin text-xl my-3'>Proyectos</h2>
-        <Projects data={data} />
+        <Projects />
 
         <h2 className='font-thin text-xl my-3'>Social</h2>
-        <Social data={data} />
+        <Social />
       </section>
     </div>
   )
