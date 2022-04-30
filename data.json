@@ -1,0 +1,40 @@
+{
+  "personal": {
+    "name": "Manu Morante"
+  },
+  "social": [
+    {
+      "name": "Codepen",
+      "url": "https://codepen.io/manumorante",
+      "icon": ""
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/manu.morante",
+      "icon": ""
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/manumorante",
+      "icon": ""
+    }
+  ],
+  "projects": [
+    {
+      "name": "CSS Pen",
+      "description": "CSS Pen is a tool for creating and editing CSS animations.",
+      "tags": "learning, css, animation",
+      "url": "https://csspen.es",
+      "repository": "https://github.com/manumorante/csspen.es",
+      "image": "https://raw.githubusercontent.com/manumorante/csspen.es/main/public/csspen_og.png"
+    },
+    {
+      "name": "Minimalist Movie Posters",
+      "description": "A collection of minimalist movie posters created in CSS with some animation.",
+      "tags": "movies, css, animation",
+      "url": "https://posters.manumorante.com/",
+      "repository": "https://github.com/manumorante/minimalist-movie-posters",
+      "image": "https://raw.githubusercontent.com/manumorante/minimalist-movie-posters/main/minimalist-movie-posters.png"
+    }
+  ]
+}
