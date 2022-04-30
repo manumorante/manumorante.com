@@ -21,7 +21,19 @@
   ],
   "projects": [
     {
+      "name": "Minimalist Movie Posters",
+      "finish": true,
+      "show": true,
+      "description": "Minimalist movie posters created and animated by code.",
+      "tags": "movies, css, animation",
+      "url": "https://posters.manumorante.com/",
+      "repository": "https://github.com/manumorante/minimalist-movie-posters",
+      "image": "https://raw.githubusercontent.com/manumorante/minimalist-movie-posters/main/minimalist-movie-posters.png"
+    },
+    {
       "name": "CSS Pen",
+      "finish": true,
+      "show": true,
       "description": "CSS Pen is a tool for creating and editing CSS animations.",
       "tags": "learning, css, animation",
       "url": "https://csspen.es",
@@ -29,12 +41,64 @@
       "image": "https://raw.githubusercontent.com/manumorante/csspen.es/main/public/csspen_og.png"
     },
     {
-      "name": "Minimalist Movie Posters",
-      "description": "A collection of minimalist movie posters created in CSS with some animation.",
-      "tags": "movies, css, animation",
-      "url": "https://posters.manumorante.com/",
-      "repository": "https://github.com/manumorante/minimalist-movie-posters",
-      "image": "https://raw.githubusercontent.com/manumorante/minimalist-movie-posters/main/minimalist-movie-posters.png"
+      "name": "Scenic Movies",
+      "finish": true,
+      "show": true,
+      "description": "Check popular and related movies in this personal project.",
+      "tags": "movies, cinema",
+      "url": "https://scenic.manumorante.com",
+      "repository": "https://github.com/manumorante/scenic",
+      "image": "https://user-images.githubusercontent.com/3266486/113701670-ba70f780-96d8-11eb-99ad-17ece6016224.png"
+    },
+    {
+      "name": "Mi mi mi: mimificador",
+      "finish": false,
+      "show": true,
+      "description": "Divertida app que convierte una frase a mi mi mi.",
+      "tags": "funny",
+      "url": "https://mimimi.manumorante.com",
+      "repository": "https://github.com/manumorante/mimimi",
+      "image": "https://user-images.githubusercontent.com/3266486/166124262-b08c041a-be94-4143-8fcb-f926cd0fb598.png"
+    },
+    {
+      "name": "Sofía Rocha portfolio",
+      "finish": false,
+      "show": false,
+      "description": "Portfolio of Sofía Rocha.",
+      "tags": "portfolio",
+      "url": "https://sofiarocha.es",
+      "repository": "https://github.com/manumorante/sofiarocha",
+      "image": false
+    },
+    {
+      "name": "Streets of Rage",
+      "finish": false,
+      "show": true,
+      "description": "Openings of the game created by code.",
+      "tags": "portfolio",
+      "url": "https://streetsofrage.manumorante.com",
+      "repository": "https://github.com/manumorante/streets-of-rage",
+      "image": "https://user-images.githubusercontent.com/3266486/166124433-c8365a83-0e09-47bd-83bc-11e54688ff9b.png"
+    },
+    {
+      "name": "Angel Redouan",
+      "finish": false,
+      "show": false,
+      "description": "Personal website.",
+      "tags": "portfolio",
+      "url": "https://angelredouan.com",
+      "repository": "https://github.com/manumorante/angelredouan.com",
+      "image": false
+    },
+    {
+      "name": "Mordisco Club",
+      "finish": false,
+      "show": false,
+      "description": "Club website.",
+      "tags": "club",
+      "url": "https://mordisco.club",
+      "repository": "https://github.com/manumorante/mordisco.club",
+      "image": false
     }
   ]
 }
