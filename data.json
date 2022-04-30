@@ -22,7 +22,7 @@
   "projects": [
     {
       "name": "Minimalist Movie Posters",
-      "finish": true,
+      "done": true,
       "show": true,
       "description": "Minimalist movie posters created and animated by code.",
       "tags": "movies, css, animation",
@@ -32,7 +32,7 @@
     },
     {
       "name": "CSS Pen",
-      "finish": true,
+      "done": true,
       "show": true,
       "description": "CSS Pen is a tool for creating and editing CSS animations.",
       "tags": "learning, css, animation",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Scenic Movies",
-      "finish": true,
+      "done": true,
       "show": true,
       "description": "Check popular and related movies in this personal project.",
       "tags": "movies, cinema",
@@ -52,7 +52,7 @@
     },
     {
       "name": "Mi mi mi: mimificador",
-      "finish": false,
+      "done": false,
       "show": true,
       "description": "Divertida app que convierte una frase a mi mi mi.",
       "tags": "funny",
@@ -62,7 +62,7 @@
     },
     {
       "name": "Sofía Rocha portfolio",
-      "finish": false,
+      "done": false,
       "show": false,
       "description": "Portfolio of Sofía Rocha.",
       "tags": "portfolio",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Streets of Rage",
-      "finish": false,
+      "done": false,
       "show": true,
       "description": "Openings of the game created by code.",
       "tags": "portfolio",
@@ -82,7 +82,7 @@
     },
     {
       "name": "Angel Redouan",
-      "finish": false,
+      "done": false,
       "show": false,
       "description": "Personal website.",
       "tags": "portfolio",
@@ -92,7 +92,7 @@
     },
     {
       "name": "Mordisco Club",
-      "finish": false,
+      "done": false,
       "show": false,
       "description": "Club website.",
       "tags": "club",

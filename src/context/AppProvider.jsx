@@ -19,9 +19,10 @@ export default function AppProvider({ children }) {
         .then((res) => res.data)
         .catch((err) => console.log(err))
 
-      const { personal, projects, social } = result
+      const social = result.social
+      const projects = result.projects.filter((item) => item.show)
 
-      setMyData({ personal, projects, social })
+      setMyData({ projects, social })
     }
 
     fetchData()
