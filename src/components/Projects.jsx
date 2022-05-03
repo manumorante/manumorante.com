@@ -16,12 +16,14 @@ export default function Projects() {
                 <div className='name font-medium text-xl text-neutral-800 dark:text-neutral-300'>
                   {item.name}
                 </div>
-                {(item.done) && (
+                {item.done && (
                   <span class='rounded-md bg-green-600 py-1 px-2 text-xs text-white'>
                     NUEVO
                   </span>
                 )}
               </div>
+              
+              {item.image && <img src={item.image} alt={item.name} />}
 
               <div className='description dark:text-neutral-400'>
                 {item.description}
