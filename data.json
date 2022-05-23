@@ -61,6 +61,16 @@
       "image": "https://user-images.githubusercontent.com/3266486/166124262-b08c041a-be94-4143-8fcb-f926cd0fb598.png"
     },
     {
+      "name": "Pure CSS Masonry Layout",
+      "done": true,
+      "show": true,
+      "description": "Gracias al Grid de css.",
+      "tags": "css, grid, masonry",
+      "url": "https://masonry.manumorante.com",
+      "repository": "https://github.com/manumorante/masonry",
+      "image": "https://user-images.githubusercontent.com/3266486/169674285-96ae4940-b40f-401e-9ed2-da424f20f3d8.png"
+    },
+    {
       "name": "Sofía Rocha portfolio",
       "done": false,
       "show": false,
