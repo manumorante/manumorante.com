@@ -8,7 +8,7 @@ export default function Projects() {
   if (!projects) return null
 
   return (
-    <div className='Projects flex flex-col gap-12 md:px-8 py-12'>
+    <div className='Projects flex flex-col gap-14 md:px-8 py-12'>
       {projects.map((project, i) => (
         <Project key={i} project={project} />
       ))}
