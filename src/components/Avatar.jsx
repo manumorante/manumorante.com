@@ -5,12 +5,10 @@ export default function Avatar() {
     'https://secure.gravatar.com/avatar/3d6f5d17df19913a7a7970923563710e?s=256'
 
   return (
-    <div className='Avatar'>
-      <img
-        className='w-32 block mx-auto h-auto m-4 rounded-2xl overflow-hidden'
-        alt='Manu Morante'
-        src={avatarUrl}
-      />
-    </div>
+    <img
+      className='block w-32 h-auto rounded-2xl overflow-hidden'
+      alt='Manu Morante'
+      src={avatarUrl}
+    />
   )
 }

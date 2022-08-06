@@ -41,6 +41,16 @@
       "image": "https://raw.githubusercontent.com/manumorante/csspen.es/main/public/csspen_og.png"
     },
     {
+      "name": "Polaroids",
+      "done": true,
+      "show": true,
+      "description": "Cute polaroid-style photos displayed cluttered on a table.",
+      "tags": "photo, css, grid",
+      "url": "https://polaroids.manumorante.com",
+      "repository": "https://github.com/manumorante/polaroids",
+      "image": "https://polaroids.manumorante.com/og.png"
+    },
+    {
       "name": "Scenic Movies",
       "done": true,
       "show": true,

@@ -1,8 +1,10 @@
 import React, { useState, useEffect, createContext, useContext } from 'react'
 import axios from 'axios'
-
-const FILE_PATH =
+const isProduction = process.env.NODE_ENV === 'production'
+const local_file = '../../data.json'
+const remote_file =
   'https://raw.githubusercontent.com/manumorante/manumorante.com/main/data.json'
+const file = isProduction ? remote_file : local_file
 
 const myDataContext = createContext()
 
@@ -15,7 +17,7 @@ export default function AppProvider({ children }) {
 
   useEffect(async () => {
     const fetchData = async () => {
-      const result = await axios(FILE_PATH)
+      const result = await axios(file)
         .then((res) => res.data)
         .catch((err) => console.log(err))
 
