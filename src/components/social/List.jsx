@@ -46,7 +46,7 @@ export default function Social() {
 
   return (
     <nav className='Social' role='complementary'>
-      <div className='flex md:flex-col justify-around'>
+      <div className='flex md:flex-col justify-between'>
         {list.map((item, index) => {
           const active = isMobile ? index === current : true
           return <Item key={index} {...item} active={active} />

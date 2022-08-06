@@ -14,7 +14,7 @@ export default function Project({ project }) {
         <Name project={project} />
       </Container>
 
-      <div className='w-full max-w-3xl md:mx-auto'>
+      <div className='w-full max-w-3xl'>
         <Cover project={project} />
       </div>
 
