@@ -8,7 +8,7 @@ import Link from './Link'
 
 export default function Project({ project }) {
   return (
-    <a className='flex flex-col gap-4' href={project?.url} target='blank'>
+    <div className='flex flex-col gap-4'>
       <Container>
         <New project={project} />
         <Name project={project} />
@@ -22,6 +22,6 @@ export default function Project({ project }) {
         <Description project={project} />
         <Link project={project} />
       </Container>
-    </a>
+    </div>
   )
 }

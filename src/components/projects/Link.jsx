@@ -6,8 +6,11 @@ export default function Link({ project }) {
   const url = project.url.replace(/^https?:\/\//, '')
 
   return (
-    <div className='block text-neutral-400 dark:text-neutral-500'>
+    <a
+      className='inline-block text-neutral-400 dark:text-neutral-500 hover:underline underline-offset-1'
+      href={project.url}
+      target='blank'>
       {url}
-    </div>
+    </a>
   )
 }
