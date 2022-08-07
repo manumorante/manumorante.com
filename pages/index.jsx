@@ -1,6 +1,7 @@
 import { PROJECTS } from '../public/data.js'
 
 import React from 'react'
+import Meta from '../components/Meta'
 import Main from '../components/Main'
 import Projects from '../components/projects/List'
 import SocialList from '../components/social/List'
@@ -15,6 +16,7 @@ export default function Home(props) {
   const { projects } = props
   return (
     <div className='md:grid md:grid-cols-[320px_auto] md:items-start'>
+      <Meta />
       <div>
         <Main />
         <div className='hidden md:block'>
