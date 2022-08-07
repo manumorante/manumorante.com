@@ -1,10 +1,8 @@
 import React from 'react'
-import { useMyData } from '../../context/AppProvider'
 import Project from './Project'
+import { projects } from '../../public/data.js'
 
 export default function Projects() {
-  const { projects } = useMyData()
-
   if (!projects) return null
 
   return (

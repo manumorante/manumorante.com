@@ -1,0 +1,15 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    @apply bg-neutral-100 text-neutral-600;
+  }
+}
+
+@layer components {
+  .skills strong {
+    @apply whitespace-nowrap font-light text-neutral-500;
+  }
+}

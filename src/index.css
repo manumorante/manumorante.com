@@ -1,9 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer components {
-  .skills strong {
-    @apply whitespace-nowrap font-light text-neutral-500;
-  }
-}

@@ -32,7 +32,7 @@ const list = [
 
 export default function Social() {
   const [current, setCurrent] = useState(0)
-  const isMobile = window.innerWidth < 768
+  const isMobile = false // window.innerWidth < 768
 
   useEffect(() => {
     if (!isMobile) return
