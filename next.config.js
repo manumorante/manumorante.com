@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: ['secure.gravatar.com'],
+  },
   experimental: {
     images: {
       allowFutureImage: true,
