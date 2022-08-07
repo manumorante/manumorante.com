@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {
-  CodeIcon,
-  BeakerIcon,
-  PhotographIcon,
-  BriefcaseIcon,
-} from '@heroicons/react/outline'
+import { CodeIcon, BeakerIcon, PhotographIcon, BriefcaseIcon } from '@heroicons/react/outline'
 import Item from './Item'
 
 const list = [
@@ -31,27 +26,11 @@ const list = [
 ]
 
 export default function Social() {
-  const [current, setCurrent] = useState(0)
-  const isMobile = false // window.innerWidth < 768
-
-  useEffect(() => {
-    if (!isMobile) return
-
-    const interval = setInterval(() => {
-      setCurrent((current + 1) % list.length)
-    }, 3000)
-
-    return () => clearInterval(interval)
-  }, [current, isMobile])
-
   return (
-    <nav className='Social' role='complementary'>
-      <div className='flex md:flex-col justify-between flex-wrap'>
-        {list.map((item, index) => {
-          const active = isMobile ? index === current : true
-          return <Item key={index} {...item} active={active} />
-        })}
-      </div>
+    <nav className='[Social] flex md:flex-col justify-between' role='complementary'>
+      {list.map((item, index) => {
+        return <Item key={index} {...item} />
+      })}
     </nav>
   )
 }
