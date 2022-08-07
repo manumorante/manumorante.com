@@ -4,7 +4,6 @@ import New from './New'
 import Name from './Name'
 import Description from './Description'
 import Cover from './Cover'
-import Links from './Links.jsx'
 import Link from './Link.jsx'
 
 export default function Project({ project }) {
