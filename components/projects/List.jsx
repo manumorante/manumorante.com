@@ -3,7 +3,7 @@ import Project from './Project'
 
 export default function Projects({ projects }) {
   return (
-    <div className='[Projects] flex flex-col gap-20 md:px-10'>
+    <div className='[Projects] flex flex-col gap-20'>
       {projects.map((project, i) => (
         <Project key={i} project={project} />
       ))}
