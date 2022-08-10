@@ -2,10 +2,11 @@ import { PROJECTS } from '../public/data.js'
 
 import React from 'react'
 import cx from 'classnames'
+import Container from '../components/Container.jsx'
 import Main from '../components/Main'
 import Projects from '../components/projects/List'
 import SocialList from '../components/social/List'
-import Container from '../components/Container.jsx'
+import ToggleDarkButton from '../components/app/ToggleDarkButton'
 
 export async function getStaticProps() {
   const projects = PROJECTS.filter((project) => project?.show)
@@ -16,11 +17,16 @@ export default function Home(props) {
   const { projects } = props
   return (
     <>
+      <div className='absolute top-10 right-10 md:top-14 md:right-14 opacity-60'>
+        <ToggleDarkButton />
+      </div>
+
       <div
         className={cx(
           '[Aside] md:fixed md:top-0 md:left-0',
           'md:w-[320px] md:h-full',
-          'bg-white dark:bg-neutral-900 bg-[url("/waves.svg")] dark:bg-[url("/dark-waves.svg")] bg-[length:100%] bg-bottom bg-no-repeat'
+          'bg-white dark:bg-neutral-900 bg-[url("/waves.svg")] dark:bg-[url("/dark-waves.svg")] bg-[length:100%] bg-bottom bg-no-repeat',
+          'transition-colors duration-500 ease-in-out'
         )}>
         <div className='md:h-full flex flex-col justify-between p-10'>
           <Main />
