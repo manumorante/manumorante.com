@@ -21,7 +21,7 @@ const list = [
   {
     icon: <BriefcaseIcon />,
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/manumorante/',
+    href: 'https://es.linkedin.com/in/manumorante',
   },
 ]
 
