@@ -4,14 +4,18 @@
 
 @layer base {
   body {
-    @apply text-neutral-600 bg-neutral-100
-    dark:text-neutral-400 dark:bg-neutral-800
+    @apply text-gray-600 dark:text-gray-400 
+    bg-white dark:bg-gray-800
     transition-colors duration-500 ease-in-out;
+  }
+
+  .Aside {
+    @apply bg-gray-100 dark:bg-gray-900;
   }
 }
 
 @layer components {
   .skills strong {
-    @apply whitespace-nowrap font-light text-neutral-500 dark:text-neutral-300;
+    @apply whitespace-nowrap font-light text-gray-500 dark:text-gray-300;
   }
 }

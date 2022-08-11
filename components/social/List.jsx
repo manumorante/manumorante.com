@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { CodeIcon, BeakerIcon, PhotographIcon, BriefcaseIcon } from '@heroicons/react/outline'
 import Item from './Item'
 
@@ -27,7 +27,7 @@ const list = [
 
 export default function Social() {
   return (
-    <nav className='[Social] flex md:flex-col justify-between' role='complementary'>
+    <nav className='[Social] flex sm:flex-col justify-between' role='complementary'>
       {list.map((item, index) => {
         return <Item key={index} {...item} />
       })}
