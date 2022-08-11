@@ -6,16 +6,26 @@
   body {
     @apply text-gray-600 dark:text-gray-400 
     bg-white dark:bg-gray-800
-    transition-colors duration-500 ease-in-out;
-  }
-
-  .Aside {
-    @apply bg-gray-100 dark:bg-gray-900;
+    transition-colors;
   }
 }
 
 @layer components {
   .skills strong {
+    @apply whitespace-nowrap font-light text-gray-500 dark:text-gray-300;
+  }
+
+  .talk {
+    @apply px-8 lg:px-0
+    w-11/12 sm:w-3/4 lg:w-3/5
+    text-2xl font-extralight text-gray-400 md:leading-relaxed;
+  }
+
+  .talk p {
+    @apply my-3;
+  }
+
+  .talk strong {
     @apply whitespace-nowrap font-light text-gray-500 dark:text-gray-300;
   }
 }

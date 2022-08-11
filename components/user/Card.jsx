@@ -8,10 +8,12 @@ export default function Card() {
       <div>
         <div className='text-2xl font-normal text-gray-800'></div>
         <div className='skills text-2xl font-extralight text-gray-400 md:leading-relaxed'>
-          <p className='my-4'>
-            <span className='block'>¡Hola!,</span> soy <strong>Manu Morante</strong>, programador{' '}
-            <strong>frontend</strong> en <strong>Domestika</strong>.
-          </p>
+          {/* <div className='my-4'>
+            <p className='talk'>
+              <span className='block'>¡Hola!,</span> soy <strong>Manu Morante</strong>, programador{' '}
+              <strong>frontend</strong> en <strong>Domestika</strong>.
+            </p>
+          </div> */}
           {/* <p className='my-4'>
             Aficionado al <strong>diseño</strong>, a la{' '}
             <strong>fotografía</strong> y a los <strong>juegos</strong> clásicos
