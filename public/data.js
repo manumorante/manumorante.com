@@ -6,6 +6,7 @@ export const PROJECTS = [
     done: true,
     show: true,
     image: true,
+    imagedark: true,
     description: 'Bonitas fotos estilo polaroid expuestas desordenadamente sobre una mesa.',
     tags: 'photo, css, grid',
     url: 'https://polaroids.manumorante.com',
