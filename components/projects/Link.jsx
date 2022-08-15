@@ -7,7 +7,7 @@ export default function Link({ project }) {
 
   return (
     <a
-      className='inline-block text-gray-400 hover:underline underline-offset-1'
+      className='inline-block text-neutral-400 hover:underline underline-offset-1'
       href={project.url}
       target='blank'>
       {url}

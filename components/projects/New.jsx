@@ -10,7 +10,7 @@ export default function New({ project }) {
         <span className='relative inline-flex rounded-full h-3 w-3 bg-green-500'></span>
       </div>
 
-      <div className='text-gray-400'>nuevo</div>
+      <div className='text-neutral-400'>nuevo</div>
     </div>
   )
 }

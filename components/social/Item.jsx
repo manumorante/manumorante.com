@@ -8,8 +8,8 @@ export default function Item({ icon, label, href }) {
         className={cx(
           'flex flex-col sm:flex-row items-center gap-1 py-3',
           'font-medium',
-          'text-gray-400',
-          'sm:hover:text-gray-600 sm:dark:hover:text-gray-300',
+          'text-neutral-400',
+          'sm:hover:text-neutral-600 sm:dark:hover:text-neutral-300',
           'transition-colors'
         )}>
         <div className='w-6 h-6'>{icon}</div>

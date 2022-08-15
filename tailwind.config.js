@@ -19,6 +19,14 @@ module.exports = {
         fadeOut: 'afadeOut var(--duration, 1s) ease-in-out forwards',
       },
 
+      // width: {
+      //   sidebar: '210px',
+      // },
+
+      spacing: {
+        sidebar: '210px',
+      },
+
       keyframes: () => ({
         afadeIn: {
           '0%': { opacity: 0 },

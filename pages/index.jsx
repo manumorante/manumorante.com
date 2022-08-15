@@ -7,7 +7,7 @@ import Aside from '../components/ui/Aside'
 import Content from '../components/ui/Content'
 import Footer from '../components/ui/Footer'
 
-import UserCard from '../components/user/Card'
+import Avatar from '../components/user/Avatar'
 import Projects from '../components/projects/List'
 import Container from '../components/ui/Container'
 import SocialList from '../components/social/List'
@@ -25,8 +25,8 @@ export default function Home(props) {
       <ToggleDarkButton />
 
       <Aside>
-        <div className='sm:h-full flex flex-col justify-between p-10'>
-          <UserCard />
+        <div className='sm:h-full flex flex-col justify-between px-10 pt-10 sm:p-10'>
+          <Avatar />
 
           <div className='hidden sm:block'>
             <SocialList />

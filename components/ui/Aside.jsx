@@ -7,8 +7,8 @@ export default function Aside({ children }) {
       className={cx(
         'Aside',
         'sm:fixed sm:top-0 sm:left-0',
-        'sm:w-[240px] sm:h-full',
-        'bg-gray-100 dark:bg-gray-900',
+        'sm:w-sidebar sm:h-full',
+        'sm:bg-neutral-100 sm:dark:bg-neutral-900',
         'transition-colors'
       )}>
       {children}

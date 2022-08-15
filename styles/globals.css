@@ -4,21 +4,21 @@
 
 @layer base {
   body {
-    @apply text-gray-600 dark:text-gray-400 
-    bg-white dark:bg-gray-800
+    @apply /* Text */ text-neutral-600 dark:text-neutral-400 
+    /* bg */ bg-white dark:bg-neutral-800
     transition-colors;
   }
 }
 
 @layer components {
   .skills strong {
-    @apply whitespace-nowrap font-light text-gray-500 dark:text-gray-300;
+    @apply whitespace-nowrap font-light text-neutral-500 dark:text-neutral-300;
   }
 
   .talk {
     @apply px-8 lg:px-0
     w-11/12 sm:w-3/4 lg:w-3/5
-    text-2xl font-extralight text-gray-400 md:leading-relaxed;
+    text-2xl font-extralight text-neutral-400 md:leading-relaxed;
   }
 
   .talk p {
@@ -26,6 +26,6 @@
   }
 
   .talk strong {
-    @apply whitespace-nowrap font-light text-gray-500 dark:text-gray-300;
+    @apply whitespace-nowrap font-light text-neutral-500 dark:text-neutral-300;
   }
 }

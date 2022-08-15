@@ -12,7 +12,7 @@ export default function Cover({ project }) {
         target='_blank'
         className={cx(
           'block',
-          'md:hover:-translate-x-1 md:hover:-translate-y-1 transition-all duration-300 ease-in-out'
+          'lg:hover:-translate-x-1 lg:hover:-translate-y-1 transition-all duration-300 ease-in-out'
         )}>
         <div className={cx({ 'dark:hidden': project.imagedark })}>
           <Image
