@@ -16,12 +16,12 @@ const list = [
   {
     icon: <PhotographIcon />,
     label: 'Instagram',
-    href: 'https://www.instagram.com/manumorante/',
+    href: 'https://www.instagram.com/manu.morante/',
   },
   {
     icon: <BriefcaseIcon />,
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/manumorante/',
+    href: 'https://es.linkedin.com/in/manumorante',
   },
 ]
 
