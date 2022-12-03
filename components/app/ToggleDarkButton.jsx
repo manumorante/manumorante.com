@@ -1,5 +1,5 @@
 import { useDark } from '../../hooks/useDark'
-import { MoonIcon, SunIcon } from '@heroicons/react/outline'
+import { MoonIcon, SunIcon } from '@heroicons/react/24/outline'
 import cx from 'classnames'
 
 export default function ToggleDarkButton() {

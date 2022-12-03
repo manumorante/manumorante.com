@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { ExternalLinkIcon, CubeTransparentIcon } from '@heroicons/react/outline'
+import { ExternalLinkIcon, CubeTransparentIcon } from '@heroicons/react/24/outline'
 
 export default function Links({ project }) {
   const { id, url } = project

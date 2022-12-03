@@ -1,23 +1,22 @@
 {
-  "name": "guajarama",
-  "version": "0.1.0",
+  "name": "manumorante",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 4000",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next",
+    "build": "next build && next export",
+    "deploy": "git add -f out/ public/.nojekyll && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
-    "@heroicons/react": "^1.0.6",
-    "autoprefixer": "^10.4.7",
-    "classnames": "^2.3.1",
-    "eslint": "8.20.0",
+    "@heroicons/react": "^2.0.13",
+    "autoprefixer": "^10.4.13",
+    "classnames": "^2.3.2",
+    "eslint": "8.29.0",
     "eslint-config-next": "12.2.2",
     "next": "12.2.2",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "^3.1.6"
+    "tailwindcss": "^3.2.4"
   }
 }

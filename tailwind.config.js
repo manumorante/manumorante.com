@@ -1,6 +1,4 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class',
   content: ['./pages/**/*.{js,jsx}', './components/**/*.{js,jsx}'],
   theme: {
     screens: {
@@ -18,10 +16,6 @@ module.exports = {
         fadeIn: 'afadeIn var(--duration, 1s) ease-in-out forwards',
         fadeOut: 'afadeOut var(--duration, 1s) ease-in-out forwards',
       },
-
-      // width: {
-      //   sidebar: '210px',
-      // },
 
       spacing: {
         sidebar: '210px',

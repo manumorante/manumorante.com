@@ -1,5 +1,5 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
+  // basePath: '/manumorante.com',
   reactStrictMode: true,
   swcMinify: true,
   images: {
