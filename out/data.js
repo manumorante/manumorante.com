@@ -9,7 +9,7 @@ export const PROJECTS = [
     imageDark: '/projects/polaroids.dark.png',
     description: 'Bonitas fotos estilo polaroid expuestas desordenadamente sobre una mesa.',
     tags: 'photo, css, grid',
-    url: 'https://polaroids.manumorante.com',
+    url: 'https://manumorante.github.io/polaroids/',
     repository: 'https://github.com/manumorante/polaroids',
   },
   {
