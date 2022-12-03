@@ -1,16 +1,16 @@
 import React from 'react'
 
-export default function Link({ project }) {
-  if (!project?.url) return null
+export default function Link({ url }) {
+  if (!url) return null
 
-  const url = project.url.replace(/^https?:\/\//, '')
+  const cuteUrl = url.replace(/^https?:\/\//, '')
 
   return (
     <a
       className='inline-block text-neutral-400 hover:underline underline-offset-1'
-      href={project.url}
+      href={url}
       target='blank'>
-      {url}
+      {cuteUrl}
     </a>
   )
 }

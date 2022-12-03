@@ -13,7 +13,7 @@ import Container from '../components/ui/Container'
 import SocialList from '../components/social/List'
 
 export async function getStaticProps() {
-  const projects = PROJECTS.filter((project) => project?.show)
+  const projects = PROJECTS.filter((project) => !project?.hidden)
   return { props: { projects } }
 }
 
