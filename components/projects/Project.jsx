@@ -8,7 +8,12 @@ import Link from './Link'
 export default function Project({ project }) {
   return (
     <div className='flex flex-col gap-4'>
-      <Cover project={project} />
+      <Cover
+        name={project?.name}
+        image={project?.image}
+        imageDark={project?.imageDark}
+        url={project?.url}
+      />
 
       <div className='px-6 lg:px-0'>
         <New project={project} />
