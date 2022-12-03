@@ -59,7 +59,7 @@ export const PROJECTS = [
     description:
       'Convierte texto a "mi mi mi". Lo puedes mandar como enlace y divertirte (o molestar a alguien ...)',
     tags: 'funny, mimificador',
-    url: 'https://mimimi.manumorante.com',
+    url: 'https://manumorante.github.io/mimimi/',
     repository: 'https://github.com/manumorante/mimimi',
   },
   {
@@ -71,7 +71,7 @@ export const PROJECTS = [
     image: '/projects/masonry.png',
     description: 'Una bonita galería de fotos que aprovecha las ventajas de CSS Grid.',
     tags: 'css, grid, masonry',
-    url: 'https://masonry.manumorante.com',
+    url: 'https://manumorante.github.io/mm-masonry/',
     repository: 'https://github.com/manumorante/masonry',
   },
   {
