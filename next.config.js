@@ -4,12 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['secure.gravatar.com'],
-  },
-  experimental: {
-    images: {
-      allowFutureImage: true,
-      // unoptimized: true,
-    },
+    unoptimized: true,
   },
 }
 

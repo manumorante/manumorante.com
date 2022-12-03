@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import cx from 'classnames'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Cover({ project }) {
@@ -15,24 +15,22 @@ export default function Cover({ project }) {
           'lg:hover:-translate-x-1 lg:hover:-translate-y-1 transition-all duration-300 ease-in-out'
         )}>
         <div className={cx({ 'dark:hidden': project.imagedark })}>
-          <Image
+          <img
             src={`/projects/${project.id}.png`}
             width={1200}
             height={628}
-            objectFit='cover'
-            objectPosition='top left'
+            className='object-cover object-left-top'
             alt={project?.name}
           />
         </div>
 
         {project.imagedark && (
           <div className='hidden dark:block'>
-            <Image
+            <img
               src={`/projects/${project.id}.dark.png`}
               width={1200}
               height={628}
-              objectFit='cover'
-              objectPosition='top left'
+              className='object-cover object-left-top'
               alt={project?.name}
             />
           </div>
