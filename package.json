@@ -1,12 +1,12 @@
 {
   "name": "manumorante",
-  "version": "1.1.0",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev -p 4000",
     "build": "next build",
-    "export": "next export",
-    "deploy": "git add -f out/ public/.nojekyll && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.13",
