@@ -1,5 +1,3 @@
-import { PROJECTS } from '../public/data.js'
-
 import React from 'react'
 import ToggleDarkButton from '../components/app/ToggleDarkButton'
 
@@ -12,14 +10,7 @@ import Projects from '../components/projects/List'
 import Container from '../components/ui/Container'
 import SocialList from '../components/social/List'
 
-export async function getStaticProps() {
-  const projects = PROJECTS.filter((project) => !project?.hidden)
-  return { props: { projects } }
-}
-
-export default function Home(props) {
-  const { projects } = props
-
+function Home() {
   return (
     <>
       <ToggleDarkButton />
@@ -45,7 +36,7 @@ export default function Home(props) {
             He juntado en esta web algunas de las cosas que hago <strong>por diversión</strong>.
           </p>
         </div>
-        <Projects projects={projects} />
+        <Projects />
       </Content>
 
       <Footer>
@@ -58,3 +49,5 @@ export default function Home(props) {
     </>
   )
 }
+
+export default Home

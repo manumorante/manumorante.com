@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function New({ project }) {
   if (!project.new) return null
 
