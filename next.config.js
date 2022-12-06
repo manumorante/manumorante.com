@@ -1,5 +1,5 @@
 const nextConfig = {
-  basePath: '/manumorante.com',
+  // basePath: '/manumorante.com',
   reactStrictMode: true,
   images: {
     domains: ['secure.gravatar.com'],
