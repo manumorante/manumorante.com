@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "build": "next build && next export",
+    "build": "next build",
+    "export": "next export",
     "deploy": "git add -f out/ public/.nojekyll && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
