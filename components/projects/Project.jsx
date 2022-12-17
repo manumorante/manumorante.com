@@ -11,7 +11,7 @@ export default function Project({ project }) {
 
   return (
     <div className='flex flex-col gap-4'>
-      <a href={project?.url}>
+      <a href={project?.url} target='_blank' rel='noreferrer'>
         <Cover name={project?.name} image={project?.image} imageDark={project?.imageDark} />
       </a>
 
@@ -34,7 +34,8 @@ export default function Project({ project }) {
             <a
               className='block sm:inline-block hover:underline underline-offset-1'
               href={url}
-              target='blank'>
+              target='_blank'
+              rel='noreferrer'>
               {cuteUrl}
             </a>
           </div>
@@ -46,7 +47,8 @@ export default function Project({ project }) {
             <a
               className='block sm:inline-block hover:underline underline-offset-1'
               href={project.repository}
-              target='blank'>
+              target='_blank'
+              rel='noreferrer'>
               {cuteRepository}
             </a>
           </div>
