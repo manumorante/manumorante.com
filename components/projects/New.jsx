@@ -1,6 +1,4 @@
-export default function New({ project }) {
-  if (!project.new) return null
-
+export default function New() {
   return (
     <div className='flex gap-1 items-center py-2'>
       <div className='flex h-3 w-3 relative'>
