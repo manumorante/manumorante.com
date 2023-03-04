@@ -16,7 +16,8 @@ export default function Projects() {
       .then((response) => response.json())
       .then((data) => {
         if (data?.projects && data.projects.length) {
-          setProjects(data.projects)
+          const published = data.projects.filter((project) => project.published)
+          setProjects(published)
           setLoading(false)
         }
       })
