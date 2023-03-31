@@ -8,8 +8,7 @@ export default function Aside({ children }) {
         'Aside',
         'sm:fixed sm:top-0 sm:left-0',
         'sm:w-sidebar sm:h-full',
-        'sm:bg-neutral-100 sm:dark:bg-neutral-900',
-        'transition-colors'
+        'sm:bg-neutral-100 sm:dark:bg-neutral-900'
       )}>
       {children}
     </div>

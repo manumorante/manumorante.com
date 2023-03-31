@@ -11,7 +11,7 @@ export default function Cover({ name, image, imageDark }) {
     <div
       className={cx(
         'block',
-        'lg:hover:-translate-x-1 lg:hover:-translate-y-1 transition-all duration-300 ease-in-out'
+        'lg:hover:-translate-x-1 lg:hover:-translate-y-1 transition-transform duration-300 ease-in-out'
       )}>
       <img
         src={router.basePath + image}

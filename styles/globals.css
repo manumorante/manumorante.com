@@ -5,8 +5,7 @@
 @layer base {
   body {
     @apply /* Text */ text-neutral-600 dark:text-neutral-400 
-    /* bg */ bg-white dark:bg-neutral-800
-    transition-colors;
+    /* bg */ bg-white dark:bg-neutral-800;
   }
 }
 
