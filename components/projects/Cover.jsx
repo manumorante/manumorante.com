@@ -1,36 +1,18 @@
-/* eslint-disable @next/next/no-img-element */
-import React from 'react'
-import cx from 'classnames'
-import { useRouter } from 'next/router'
+import cx from 'clsx'
+import Image from 'next/image'
 
-export default function Cover({ name, image, imageDark }) {
-  const router = useRouter()
-  if (!name || !image) return null
+export default function Cover({ alt = 'Project', image, imageDark }) {
+  if (!image) return null
+
+  const imgCx = cx('object-cover object-left-top')
+  const lightCx = cx(imgCx, { 'block dark:hidden': imageDark })
+  const darkCx = cx(imgCx, 'hidden dark:block')
 
   return (
-    <div
-      className={cx(
-        'block',
-        'lg:hover:-translate-x-1 lg:hover:-translate-y-1 transition-transform duration-300 ease-in-out'
-      )}>
-      <img
-        src={router.basePath + image}
-        width={1200}
-        height={628}
-        className={cx('object-cover object-left-top', {
-          'dark:hidden': imageDark,
-        })}
-        alt={name}
-      />
-
+    <div>
+      <Image src={image} width={1200} height={628} className={lightCx} alt={alt} />
       {imageDark && (
-        <img
-          src={router.basePath + imageDark}
-          width={1200}
-          height={628}
-          className='hidden dark:block object-cover object-left-top'
-          alt={name}
-        />
+        <Image src={imageDark} width={1200} height={628} className={darkCx} alt={alt} />
       )}
     </div>
   )

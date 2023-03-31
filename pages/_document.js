@@ -2,8 +2,14 @@ import { Html, Head, Main, NextScript } from 'next/document'
 import Script from 'next/script'
 
 export default function Document() {
+  const colors = ['#262626']
+  const htmlStyles = {
+    // background: `linear-gradient(314deg, ${colors[0]}, transparent)`,
+    // background: colors[0],
+  }
+
   return (
-    <Html>
+    <Html style={htmlStyles}>
       <Head>
         <Script id='theme-dark' strategy='afterInteractive'>
           {`try {

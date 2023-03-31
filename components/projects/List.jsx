@@ -1,11 +1,14 @@
 var DB_JSON = 'https://raw.githubusercontent.com/manumorante/db/main/db.json'
 
-import React, { useEffect, useState } from 'react'
+import cx from 'clsx'
+import { useEffect, useState } from 'react'
 import Project from './Project'
 
 export default function Projects() {
   const [loading, setLoading] = useState(false)
   const [projects, setProjects] = useState([])
+
+  const mainCx = cx('Projects', 'flex flex-col gap-20')
 
   useEffect(() => {
     if (loading || projects?.length > 0) return
@@ -27,7 +30,7 @@ export default function Projects() {
   if (projects?.length <= 0) return null
 
   return (
-    <div className='Projects flex flex-col gap-20'>
+    <div className={mainCx}>
       {projects.map((project, i) => (
         <Project key={i} project={project} />
       ))}
