@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export function useDark() {
   const [isDark, setIsDark] = useState(false)
@@ -20,16 +20,6 @@ export function useDark() {
   }
 
   const toggleDark = () => updateDark(!checkDark())
-  
-  const clean = () => {
-    localStorage.removeItem('dark')
-    document.documentElement.classList.remove('dark')
-    setIsDark(false)
-  }
 
-  useEffect(() => {
-    updateDark(checkDark())
-  }, [])
-
-  return [isDark, toggleDark, clean]
+  return [isDark, toggleDark]
 }
