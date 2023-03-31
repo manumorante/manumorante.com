@@ -1,11 +1,12 @@
-import React from 'react'
+import cx from 'clsx'
 import ToggleDarkButton from '../components/app/ToggleDarkButton'
 
+import Statement from '../components/ui/Statement'
 import Aside from '../components/ui/Aside'
 import Content from '../components/ui/Content'
 import Footer from '../components/ui/Footer'
 
-import Avatar from '../components/user/Avatar'
+import Avatar from '../components/ui/Avatar'
 import Projects from '../components/projects/List'
 import Container from '../components/ui/Container'
 import SocialList from '../components/social/List'
@@ -16,32 +17,31 @@ function Home() {
       <ToggleDarkButton />
 
       <Aside>
-        <div className='sm:h-full flex flex-col justify-between px-10 pt-10 sm:p-10'>
+        <div className={cx('px-8 sm:px-10 pt-10 sm:p-10 sm:h-full', 'flex flex-col gap-10')}>
           <Avatar />
-
-          <div className='hidden sm:block'>
-            <SocialList />
-          </div>
+          <SocialList className='hidden sm:block' />
         </div>
       </Aside>
 
       <Content>
-        <div className='talk my-12'>
-          <p>
-            <span className='block'>¡Hola!,</span> soy <strong>Manu Morante</strong>, programador{' '}
-            <strong>frontend</strong> en <strong>Domestika</strong>.
-          </p>
-        </div>
+        <Statement />
         <Projects />
-      </Content>
+        <Footer>
+          <Container>
+            <SocialList className='sm:hidden mt-12' />
+          </Container>
 
-      <Footer>
-        <Container>
-          <div className='sm:hidden py-12'>
-            <SocialList />
-          </div>
-        </Container>
-      </Footer>
+          <div
+            className={cx('mt-12 mb-12', 'border-t border-neutral-200 dark:border-neutral-700')}
+          />
+
+          <Container>
+            <p className={cx('mb-12', 'text-neutral-300 dark:text-neutral-500', 'text-center')}>
+              © 2023 Manu Morante
+            </p>
+          </Container>
+        </Footer>
+      </Content>
     </>
   )
 }

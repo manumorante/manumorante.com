@@ -10,8 +10,8 @@ export default function ToggleDarkButton() {
       className={cx(
         'ToggleDarkButton',
         'fixed',
-        'top-10 sm:top-6 md:top-10 lg:top-14',
-        'right-10 sm:right-6 md:right-10 lg:right-14',
+        'top-9 sm:top-6 md:top-10 lg:top-14',
+        'right-8 sm:right-6 md:right-10 lg:right-14',
         'w-6 h-6',
         'opacity-60'
       )}
