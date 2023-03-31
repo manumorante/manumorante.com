@@ -4,22 +4,7 @@
 
 @layer base {
   body {
-    @apply w-full overflow-x-hidden
-    text-neutral-600 dark:text-neutral-400 
+    @apply text-neutral-600 dark:text-neutral-400 
     bg-white dark:bg-neutral-800;
-  }
-}
-
-@layer components {
-  .skills strong {
-    @apply whitespace-nowrap font-light text-neutral-500 dark:text-neutral-300;
-  }
-
-  .talk {
-    @apply text-2xl font-extralight text-neutral-400 md:leading-relaxed;
-  }
-
-  .talk strong {
-    @apply whitespace-nowrap font-light text-neutral-500 dark:text-neutral-300;
   }
 }

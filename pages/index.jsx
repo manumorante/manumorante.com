@@ -7,9 +7,9 @@ import Content from '../components/ui/Content'
 import Footer from '../components/ui/Footer'
 
 import Avatar from '../components/ui/Avatar'
-import Projects from '../components/projects/List'
+import Projects from '../components/projects/Projects'
 import Container from '../components/ui/Container'
-import SocialList from '../components/social/List'
+import SocialList from '../components/Social'
 
 function Home() {
   return (
@@ -17,7 +17,11 @@ function Home() {
       <ToggleDarkButton />
 
       <Aside>
-        <div className={cx('px-8 sm:px-10 pt-10 sm:p-10 sm:h-full', 'flex flex-col gap-10')}>
+        <div
+          className={cx(
+            'px-8 sm:px-10 pt-10 sm:p-10 sm:h-full',
+            'flex flex-col gap-10 justify-between'
+          )}>
           <Avatar />
           <SocialList className='hidden sm:block' />
         </div>
