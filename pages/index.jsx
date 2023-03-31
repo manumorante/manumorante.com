@@ -1,15 +1,15 @@
 import cx from 'clsx'
-import ToggleDarkButton from '../components/app/ToggleDarkButton'
+import ToggleDarkButton from 'components/app/ToggleDarkButton'
 
-import Statement from '../components/ui/Statement'
-import Aside from '../components/ui/Aside'
-import Content from '../components/ui/Content'
-import Footer from '../components/ui/Footer'
+import Statement from 'components/ui/Statement'
+import Aside from 'components/ui/Aside'
+import Content from 'components/ui/Content'
+import Footer from 'components/ui/Footer'
 
-import Avatar from '../components/ui/Avatar'
-import Projects from '../components/projects/Projects'
-import Container from '../components/ui/Container'
-import SocialList from '../components/Social'
+import Avatar from 'components/ui/Avatar'
+import Projects from 'components/projects/Projects'
+import Container from 'components/ui/Container'
+import SocialList from 'components/ui/SocialList'
 
 function Home() {
   return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'clsx'
 
-export default function Item({ icon, label, href }) {
+export default function SocialItem({ icon, label, href }) {
   return (
     <a href={href} target='blank'>
       <div

@@ -1,8 +1,8 @@
 import cx from 'clsx'
 import { CodeBracketIcon, BeakerIcon, PhotoIcon, BriefcaseIcon } from '@heroicons/react/24/outline'
-import Item from './Item'
+import Item from './SocialItem'
 
-export default function Social({ className }) {
+export default function SocialList({ className }) {
   const mainCx = cx('Social flex sm:flex-col justify-between', className)
 
   return (
