@@ -31,10 +31,6 @@ function Home() {
             <span className='block'>¡Hola!,</span> soy <strong>Manu Morante</strong>, programador{' '}
             <strong>frontend</strong> en <strong>Domestika</strong>.
           </p>
-
-          <p>
-            He juntado en esta web algunas de las cosas que hago <strong>por diversión</strong>.
-          </p>
         </div>
         <Projects />
       </Content>
