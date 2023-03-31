@@ -1,16 +1,12 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import Script from 'next/script'
+import Meta from '../components/app/Meta'
 
 export default function Document() {
-  const colors = ['#262626']
-  const htmlStyles = {
-    // background: `linear-gradient(314deg, ${colors[0]}, transparent)`,
-    // background: colors[0],
-  }
-
   return (
-    <Html style={htmlStyles}>
+    <Html>
       <Head>
+        <Meta />
         <Script id='theme-dark' strategy='afterInteractive'>
           {`try {
               if (localStorage.dark === 'true' || (!('dark' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
