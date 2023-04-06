@@ -13,25 +13,9 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
-      animation: {
-        fadeIn: 'afadeIn var(--duration, 1s) ease-in-out forwards',
-        fadeOut: 'afadeOut var(--duration, 1s) ease-in-out forwards',
-      },
-
       spacing: {
         sidebar: '210px',
       },
-
-      keyframes: () => ({
-        afadeIn: {
-          '0%': { opacity: 0 },
-          '100%': { opacity: 1 },
-        },
-        afadeOut: {
-          '0%': { opacity: 1 },
-          '100%': { opacity: 0 },
-        },
-      }),
     },
   },
   plugins: [],
