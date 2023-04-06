@@ -1,6 +1,8 @@
-import { useDark } from '../../hooks/useDark'
-import { MoonIcon, SunIcon } from '@heroicons/react/24/outline'
+'use client'
+
 import cx from 'clsx'
+import { MoonIcon, SunIcon } from '@heroicons/react/24/outline'
+import { useDark } from 'lib/useDark'
 
 export default function ToggleDarkButton() {
   const [isDark, toggleDark] = useDark()

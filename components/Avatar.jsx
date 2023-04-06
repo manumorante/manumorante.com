@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import cx from 'clsx'
+import Image from 'next/image'
 
 export default function Avatar() {
   const data = {

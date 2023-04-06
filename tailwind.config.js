@@ -1,6 +1,6 @@
 module.exports = {
   darkMode: 'class',
-  content: ['./pages/**/*.{js,jsx}', './components/**/*.{js,jsx}'],
+  content: ['./app/**/*.{js,jsx}', './components/**/*.{js,jsx}'],
   theme: {
     screens: {
       joseluis: '320px',

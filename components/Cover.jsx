@@ -10,11 +10,11 @@ export default function Cover({ alt = 'Project', image, imageDark }) {
   const darkCx = cx(imgCx, 'hidden dark:block')
 
   return (
-    <div className={mainCx}>
+    <picture className={mainCx}>
       <Image src={image} width={1200} height={628} className={lightCx} alt={alt} />
       {imageDark && (
         <Image src={imageDark} width={1200} height={628} className={darkCx} alt={alt} />
       )}
-    </div>
+    </picture>
   )
 }

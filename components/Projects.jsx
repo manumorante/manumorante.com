@@ -1,6 +1,7 @@
-var DB_JSON = 'https://raw.githubusercontent.com/manumorante/db/main/db.json'
+'use client'
 
-import cx from 'clsx'
+import { meta } from 'config'
+
 import { useEffect, useState } from 'react'
 import Project from './Project'
 
@@ -8,14 +9,12 @@ export default function Projects() {
   const [loading, setLoading] = useState(false)
   const [projects, setProjects] = useState([])
 
-  const mainCx = cx('Projects', 'flex flex-col gap-20')
-
   useEffect(() => {
     if (loading || projects?.length > 0) return
 
     setLoading(true)
 
-    fetch(DB_JSON)
+    fetch(meta.projects.url)
       .then((response) => response.json())
       .then((data) => {
         if (data?.projects && data.projects.length) {
@@ -30,7 +29,7 @@ export default function Projects() {
   if (projects?.length <= 0) return null
 
   return (
-    <div className={mainCx}>
+    <div className='Projects flex flex-col gap-20'>
       {projects.map((project, i) => (
         <Project key={i} project={project} />
       ))}

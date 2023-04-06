@@ -1,7 +1,7 @@
 import cx from 'clsx'
 import { GlobeAltIcon, CodeBracketIcon } from '@heroicons/react/24/outline'
-import New from '../ui/New'
-import Cover from './Cover'
+import New from 'components/New'
+import Cover from 'components/Cover'
 
 export default function Project({ project }) {
   const url = project?.url || ''
@@ -30,12 +30,12 @@ export default function Project({ project }) {
   const iconCx = cx('w-6 h-6 lg:w-5 lg:h-5 text-neutral-400')
 
   return (
-    <div className={mainCx}>
+    <article className={mainCx}>
       <a className={coverCx} href={project?.url} target='_blank' rel='noreferrer'>
         <Cover alt={project?.name} image={project?.image} imageDark={project?.imageDark} />
       </a>
 
-      <div className={contentCx}>
+      <footer className={contentCx}>
         <div className={nameCx}>
           <span>{project.name}</span>
           {project.featured && <New />}
@@ -59,7 +59,7 @@ export default function Project({ project }) {
             </div>
           </a>
         )}
-      </div>
-    </div>
+      </footer>
+    </article>
   )
 }
