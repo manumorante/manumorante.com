@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
         <meta property='og:image' content={meta.url + meta.image} />
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href={meta.url + '/favicon.ico'} />
 
         <script
           dangerouslySetInnerHTML={{
@@ -24,19 +24,7 @@ export default function RootLayout({ children }) {
                 } else {
                   document.documentElement.classList.remove('dark')
                 }
-              } catch (_) {}
-              `,
-          }}
-        />
-      </head>
 
-      <body>
-        {children}
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
@@ -47,11 +35,14 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+
         <Script
           strategy='afterInteractive'
           src={`https://www.googletagmanager.com/gtag/js?id=${meta.ga}`}
         />
-      </body>
+      </head>
+
+      <body>{children}</body>
     </html>
   )
 }

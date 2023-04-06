@@ -24,7 +24,7 @@ export default function Social({ className }) {
   const mainCx = cx('Social flex sm:flex-col justify-between', className)
 
   return (
-    <nav className={mainCx} role='complementary'>
+    <aside className={mainCx} role='complementary'>
       <Item icon={<CodeBracketIcon />} label='Github' href='https://github.com/manumorante' />
       <Item icon={<BeakerIcon />} label='Codepen' href='https://codepen.io/manumorante' />
       <Item icon={<PhotoIcon />} label='Instagram' href='https://www.instagram.com/manu.morante' />
@@ -33,6 +33,6 @@ export default function Social({ className }) {
         label='LinkedIn'
         href='https://es.linkedin.com/in/manumorante'
       />
-    </nav>
+    </aside>
   )
 }
