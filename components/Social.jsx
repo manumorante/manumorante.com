@@ -24,7 +24,7 @@ export default function Social({ className }) {
   const mainCx = cx('Social flex sm:flex-col justify-between', className)
 
   return (
-    <aside className={mainCx} role='complementary'>
+    <aside className={mainCx}>
       <Item icon={<CodeBracketIcon />} label='Github' href='https://github.com/manumorante' />
       <Item icon={<BeakerIcon />} label='Codepen' href='https://codepen.io/manumorante' />
       <Item icon={<PhotoIcon />} label='Instagram' href='https://www.instagram.com/manu.morante' />
