@@ -21,7 +21,11 @@ export default function Home() {
 
       <Content>
         <Statement />
-        <Projects />
+
+        <div className='Projects flex flex-col gap-20 min-h-screen'>
+          <Projects />
+        </div>
+
         <Footer>
           <Container>
             <Social className='sm:hidden mt-12' />

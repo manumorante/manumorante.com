@@ -2,6 +2,7 @@ import cx from 'clsx'
 import { GlobeAltIcon, CodeBracketIcon } from '@heroicons/react/24/outline'
 import New from 'components/New'
 import Cover from 'components/Cover'
+import Link from 'next/link'
 
 export default function Project({ project }) {
   const url = project?.url || ''
@@ -10,9 +11,8 @@ export default function Project({ project }) {
   const repository = project?.repository || '/'
   const cuteRepository = repository.split('/').at(-1)
 
-  const mainCx = cx('Project', 'flex flex-col gap-4')
-  const coverCx = cx('mb-3')
-  const contentCx = cx('Content', 'px-6 lg:px-0')
+  const mainCx = 'Project'
+  const contentCx = cx('Content', 'mt-4 px-6 lg:px-0')
   const nameCx = cx(
     'Name',
     'flex items-center gap-2',
@@ -22,44 +22,42 @@ export default function Project({ project }) {
     'Description',
     'text-2xl lg:text-xl text-neutral-600 dark:text-neutral-300 font-light mb-6'
   )
+  const mediaCx = cx('Media', 'flex gap-1 items-center')
   const linkCx = cx(
     'Link',
-    'block my-1 hover:underline underline-offset-2 text-md text-neutral-400'
+    'block my-1 hover:underline underline-offset-2 text-md text-neutral-400',
+    mediaCx
   )
-  const mediaCx = cx('Media', 'flex gap-1 items-center')
   const iconCx = cx('w-6 h-6 lg:w-5 lg:h-5 text-neutral-400')
 
   return (
     <article className={mainCx}>
-      <a className={coverCx} href={project?.url} target='_blank' rel='noreferrer'>
+      <Link href={project?.url} target='_blank' rel='noreferrer'>
         <Cover alt={project?.name} image={project?.image} imageDark={project?.imageDark} />
-      </a>
+      </Link>
 
-      <footer className={contentCx}>
-        <div className={nameCx}>
+      <div className={contentCx}>
+        <h3 className={nameCx}>
           <span>{project.name}</span>
           {project.featured && <New />}
-        </div>
-        <div className={descriptionCx}>{project.description}</div>
+        </h3>
+
+        <h4 className={descriptionCx}>{project.description}</h4>
 
         {project?.url && (
-          <a className={linkCx} href={url} target='_blank' rel='noreferrer'>
-            <div className={mediaCx}>
-              <GlobeAltIcon className={iconCx} />
-              {cuteUrl}
-            </div>
-          </a>
+          <Link className={linkCx} href={url} target='_blank' rel='noreferrer'>
+            <GlobeAltIcon className={iconCx} />
+            {cuteUrl}
+          </Link>
         )}
 
         {project?.repository && (
-          <a className={linkCx} href={project.repository} target='_blank' rel='noreferrer'>
-            <div className={mediaCx}>
-              <CodeBracketIcon className={iconCx} />
-              {cuteRepository}
-            </div>
-          </a>
+          <Link className={linkCx} href={project.repository} target='_blank' rel='noreferrer'>
+            <CodeBracketIcon className={iconCx} />
+            {cuteRepository}
+          </Link>
         )}
-      </footer>
+      </div>
     </article>
   )
 }
