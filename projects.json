@@ -1,137 +1,139 @@
-[
-  {
-    "name": "Mi mi mi",
-    "id": "mimimi",
-    "published": true,
-    "featured": false,
-    "image": "/projects/mimimi.jpg",
-    "imageDark": "/projects/mimimi.dark.jpg",
-    "description": "Convierte texto a \"mi mi mi\" y compártelo como enlace a alguien.",
-    "tags": ["funny", "mimificador"],
-    "url": "https://mimimi.manumorante.com",
-    "repository": "https://github.com/manumorante/mimimi"
-  },
-  {
-    "name": "Mordisco Club",
-    "id": "mordisco.club",
-    "published": true,
-    "featured": true,
-    "image": "/projects/mordisco-club.jpg",
-    "imageDark": "",
-    "description": "Club website.",
-    "tags": ["club"],
-    "url": "https://mordisco.club",
-    "repository": "https://github.com/manumorante/mordisco.club"
-  },
-  {
-    "name": "Polaroids",
-    "id": "polaroids",
-    "published": true,
-    "featured": true,
-    "image": "/projects/polaroids.jpg",
-    "imageDark": "/projects/polaroids.dark.jpg",
-    "description": "Bonitas fotos estilo polaroid expuestas desordenadamente sobre una mesa.",
-    "tags": ["photo", "css", "grid"],
-    "url": "https://polaroids.manumorante.com",
-    "repository": "https://github.com/manumorante/polaroids"
-  },
-  {
-    "name": "Minimalist Movie Posters",
-    "id": "minimalist-movie-posters",
-    "published": true,
-    "featured": false,
-    "image": "/projects/minimalist-movie-posters.jpg",
-    "imageDark": "/projects/minimalist-movie-posters.dark.jpg",
-    "description": "Carteles de cine minimalistas creados y animados por código.",
-    "tags": ["movies", "css", "animation"],
-    "url": "https://posters.manumorante.com",
-    "repository": "https://github.com/manumorante/minimalist-movie-posters"
-  },
-  {
-    "name": "Raycast DS Utility",
-    "id": "raycast/ds-utilities",
-    "published": true,
-    "featured": true,
-    "image": "/projects/ds-utilities.jpg",
-    "imageDark": "/projects/ds-utilities.dark.jpg",
-    "description": "Raycast Extension to manipulate DS Utilities classes.",
-    "tags": ["raycast", "tool", "css", "ds"],
-    "url": "https://manumorante.github.io/raycast-ds-utilities",
-    "repository": "https://github.com/manumorante/raycast-ds-utilities"
-  },
-  {
-    "name": "CSS Pen",
-    "id": "csspen",
-    "published": true,
-    "featured": false,
-    "image": "/projects/csspen.png",
-    "imageDark": "",
-    "description": "Logos famosos en animación paso a paso con CSS.",
-    "tags": ["learning", "css", "animation"],
-    "url": "https://csspen.es",
-    "repository": "https://github.com/manumorante/csspen.es"
-  },
+{
+  "projects": [
+    {
+      "name": "Mi mi mi",
+      "id": "mimimi",
+      "published": true,
+      "featured": false,
+      "image": "/projects/mimimi.jpg",
+      "imageDark": "/projects/mimimi.dark.jpg",
+      "description": "Convierte texto a \"mi mi mi\" y compártelo como enlace a alguien.",
+      "tags": ["funny", "mimificador"],
+      "url": "https://mimimi.manumorante.com",
+      "repository": "https://github.com/manumorante/mimimi"
+    },
+    {
+      "name": "Mordisco Club",
+      "id": "mordisco.club",
+      "published": true,
+      "featured": true,
+      "image": "/projects/mordisco-club.jpg",
+      "imageDark": "",
+      "description": "Club website.",
+      "tags": ["club"],
+      "url": "https://mordisco.club",
+      "repository": "https://github.com/manumorante/mordisco.club"
+    },
+    {
+      "name": "Polaroids",
+      "id": "polaroids",
+      "published": true,
+      "featured": true,
+      "image": "/projects/polaroids.jpg",
+      "imageDark": "/projects/polaroids.dark.jpg",
+      "description": "Bonitas fotos estilo polaroid expuestas desordenadamente sobre una mesa.",
+      "tags": ["photo", "css", "grid"],
+      "url": "https://polaroids.manumorante.com",
+      "repository": "https://github.com/manumorante/polaroids"
+    },
+    {
+      "name": "Minimalist Movie Posters",
+      "id": "minimalist-movie-posters",
+      "published": true,
+      "featured": false,
+      "image": "/projects/minimalist-movie-posters.jpg",
+      "imageDark": "/projects/minimalist-movie-posters.dark.jpg",
+      "description": "Carteles de cine minimalistas creados y animados por código.",
+      "tags": ["movies", "css", "animation"],
+      "url": "https://posters.manumorante.com",
+      "repository": "https://github.com/manumorante/minimalist-movie-posters"
+    },
+    {
+      "name": "Raycast DS Utility",
+      "id": "raycast/ds-utilities",
+      "published": true,
+      "featured": true,
+      "image": "/projects/ds-utilities.jpg",
+      "imageDark": "/projects/ds-utilities.dark.jpg",
+      "description": "Raycast Extension to manipulate DS Utilities classes.",
+      "tags": ["raycast", "tool", "css", "ds"],
+      "url": "https://manumorante.github.io/raycast-ds-utilities",
+      "repository": "https://github.com/manumorante/raycast-ds-utilities"
+    },
+    {
+      "name": "CSS Pen",
+      "id": "csspen",
+      "published": true,
+      "featured": false,
+      "image": "/projects/csspen.png",
+      "imageDark": "",
+      "description": "Logos famosos en animación paso a paso con CSS.",
+      "tags": ["learning", "css", "animation"],
+      "url": "https://csspen.es",
+      "repository": "https://github.com/manumorante/csspen.es"
+    },
 
-  {
-    "name": "Scenic Movies",
-    "id": "scenic",
-    "published": true,
-    "featured": false,
-    "image": "/projects/scenic.jpg",
-    "imageDark": "",
-    "description": "Mi versión de una web de cine con diseño inspirado en Letterboxd y que me ha servido para practicar con arquitecturas limpias.",
-    "tags": ["movies", "cinema"],
-    "url": "https://scenic.manumorante.com",
-    "repository": "https://github.com/manumorante/scenic"
-  },
+    {
+      "name": "Scenic Movies",
+      "id": "scenic",
+      "published": true,
+      "featured": false,
+      "image": "/projects/scenic.jpg",
+      "imageDark": "",
+      "description": "Mi versión de una web de cine con diseño inspirado en Letterboxd y que me ha servido para practicar con arquitecturas limpias.",
+      "tags": ["movies", "cinema"],
+      "url": "https://scenic.manumorante.com",
+      "repository": "https://github.com/manumorante/scenic"
+    },
 
-  {
-    "name": "Galería de fotos Masonry",
-    "id": "masonry",
-    "published": true,
-    "featured": false,
-    "image": "/projects/masonry.jpg",
-    "imageDark": "",
-    "description": "Una bonita galería de fotos que aprovecha las ventajas de CSS Grid.",
-    "tags": ["css", "grid", "masonry"],
-    "url": "https://masonry.manumorante.com",
-    "repository": "https://github.com/manumorante/masonry"
-  },
-  {
-    "name": "Streets of Rage",
-    "id": "sor",
-    "published": true,
-    "featured": false,
-    "image": "/projects/sor.png",
-    "imageDark": "",
-    "description": "Introducción del juego adorado Streets of Rage de Sega Megadrive creado y animado todo con código.",
-    "tags": ["retro", "game", "css", "animation"],
-    "url": "https://streets-of-rage.manumorante.com",
-    "repository": "https://github.com/manumorante/streets-of-rage"
-  },
+    {
+      "name": "Galería de fotos Masonry",
+      "id": "masonry",
+      "published": true,
+      "featured": false,
+      "image": "/projects/masonry.jpg",
+      "imageDark": "",
+      "description": "Una bonita galería de fotos que aprovecha las ventajas de CSS Grid.",
+      "tags": ["css", "grid", "masonry"],
+      "url": "https://masonry.manumorante.com",
+      "repository": "https://github.com/manumorante/masonry"
+    },
+    {
+      "name": "Streets of Rage",
+      "id": "sor",
+      "published": true,
+      "featured": false,
+      "image": "/projects/sor.png",
+      "imageDark": "",
+      "description": "Introducción del juego adorado Streets of Rage de Sega Megadrive creado y animado todo con código.",
+      "tags": ["retro", "game", "css", "animation"],
+      "url": "https://streets-of-rage.manumorante.com",
+      "repository": "https://github.com/manumorante/streets-of-rage"
+    },
 
-  {
-    "name": "Raycast Domestika",
-    "id": "raycast/domestika",
-    "published": false,
-    "featured": false,
-    "image": "",
-    "imageDark": "",
-    "description": "Intranet extension to use our Domestika API.",
-    "tags": ["raycast", "tool", "productivity"],
-    "url": "",
-    "repository": ""
-  },
-  {
-    "name": "Sofía Rocha",
-    "id": "sofiarocha",
-    "published": false,
-    "featured": false,
-    "image": "",
-    "imageDark": "",
-    "description": "Portafolio personal de Sofía Rocha.",
-    "tags": ["portfolio", "cv"],
-    "url": "https://sofiarocha.es",
-    "repository": "https://github.com/manumorante/sofiarocha"
-  }
-]
+    {
+      "name": "Raycast Domestika",
+      "id": "raycast/domestika",
+      "published": false,
+      "featured": false,
+      "image": "",
+      "imageDark": "",
+      "description": "Intranet extension to use our Domestika API.",
+      "tags": ["raycast", "tool", "productivity"],
+      "url": "",
+      "repository": ""
+    },
+    {
+      "name": "Sofía Rocha",
+      "id": "sofiarocha",
+      "published": false,
+      "featured": false,
+      "image": "",
+      "imageDark": "",
+      "description": "Portafolio personal de Sofía Rocha.",
+      "tags": ["portfolio", "cv"],
+      "url": "https://sofiarocha.es",
+      "repository": "https://github.com/manumorante/sofiarocha"
+    }
+  ]
+}
