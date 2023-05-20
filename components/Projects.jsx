@@ -1,8 +1,8 @@
-import { projects } from 'projects.js'
+import projectsJson from 'projects.json'
 import Project from './Project'
 
 export default async function Projects() {
-  const published = projects.filter((project) => project.published)
+  const published = projectsJson.filter((project) => project.published)
 
   if (published?.length <= 0) return null
 
