@@ -43,10 +43,7 @@ Salida:
       <h2 className={subtitleCx}>Ejemplos donde responder con mi mi mi</h2>
       <PromptForm
         placeholder='new house'
-        template={`
-Give me three ironic text lines of less than 10 words,
-to ironically tease a friend on the topic [[PROMPT]]       
-`}
+        template={`List 3 short ironic sentences to annoy a friend on the subject [[PROMPT]]`}
       />
     </div>
   )

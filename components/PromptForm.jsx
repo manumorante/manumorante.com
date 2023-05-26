@@ -43,7 +43,7 @@ export default function PromptForm({ placeholder = '', template = '', actionName
 
     const prompt = addUserPrompt(template, userPrompt)
     const response = await ask({ prompt })
-    setResponse(response)
+    setResponse(response.trim())
   }
 
   return (
