@@ -1,6 +1,9 @@
 import { meta } from 'config'
 import 'styles/globals.css'
 import Script from 'next/script'
+import cx from 'clsx'
+import { Aside, Avatar, Content, Social, Footer, Container, ToggleDarkButton } from 'components'
+import Link from 'next/link'
 
 export default function RootLayout({ children }) {
   return (
@@ -42,7 +45,37 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body>{children}</body>
+      <body>
+        <Aside>
+          <Link href='/'>
+            <Avatar />
+          </Link>
+          <Social className='hidden sm:flex' />
+        </Aside>
+
+        <Content>
+          {/* CHILDREN */}
+          {children}
+
+          <Footer>
+            <Container>
+              <Social className='sm:hidden mt-12' />
+            </Container>
+
+            <div
+              className={cx('mt-12 mb-12', 'border-t border-neutral-200 dark:border-neutral-700')}
+            />
+
+            <Container>
+              <p className={cx('mb-12', 'text-neutral-300 dark:text-neutral-500', 'text-center')}>
+                © 2023 Manu Morante
+              </p>
+            </Container>
+          </Footer>
+        </Content>
+
+        <ToggleDarkButton />
+      </body>
     </html>
   )
 }
