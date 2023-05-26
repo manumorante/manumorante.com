@@ -1,4 +1,5 @@
-import { projects } from 'projects.json'
+import data from 'projects.json'
+const projects = data.projects
 import Project from './Project'
 
 export default async function Projects() {

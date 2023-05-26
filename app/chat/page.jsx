@@ -1,7 +1,6 @@
 'use client'
 
 import cx from 'clsx'
-
 import { PromptForm } from 'components'
 
 export default function Page() {
@@ -15,15 +14,39 @@ export default function Page() {
   return (
     <div className={mainCx}>
       <h2 className={subtitleCx}>Consulta directa</h2>
-      <PromptForm />
+      <PromptForm placeholder='difine cube at a glance' />
 
-      <h2 className={subtitleCx}>Convierte a "mimimi"</h2>
+      <h2 className={subtitleCx}>Convierte a mi mi mi</h2>
       <PromptForm
-        template={`Aprende de este ejemplo donde se convierte texto reemplazando las vocales por la letra i pero de forma que se lea correcto. Responde solamente el texto que corresponde a la ultima respuesta:
-Prompt: Hola, cómo estás?
-Respuesta: hili, kimi istis?
-Prompt: [[PROMPT]]
-Respuesta: `}
+        placeholder='Mi bicicleta llega antes que tu coche nuevo'
+        template={`
+Según los siguientes ejemplos, reemplaza las vocales por la letra 'i',
+
+- La palabra 'que' se convierte en 'qui' en lugar de en 'qi' debido a que 'qi' no existe en castellano.
+- A partir de la cuarta palabra, se dejan algunas vocales sin reemplazar.
+- Si la frase es mayor de 6 palabras se corta y se añade 'mi mi mi' al final.
+
+Responde solamente el texto que corresponde a la ultima 'Salida'.
+
+Ejemplos:
+Entrada: 'Hola, cómo estás?'
+Salida: 'hili, kimi istis?'
+
+Entrada: 'Al final tengo que volver a casa por el documento'
+Salida: 'il finil tingui qui vilver a quisi mi mi mi'
+
+Entrada: [[PROMPT]]
+Salida:
+    `}
+      />
+
+      <h2 className={subtitleCx}>Ejemplos donde responder con mi mi mi</h2>
+      <PromptForm
+        placeholder='new house'
+        template={`
+Give me three ironic text lines of less than 10 words,
+to ironically tease a friend on the topic [[PROMPT]]       
+`}
       />
     </div>
   )
