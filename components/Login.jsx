@@ -1,32 +1,18 @@
-'use client'
-
-import { useState, useEffect } from 'react'
-
 export default function Login() {
-  const [password, setPassword] = useState('')
+  const handleSubmit = (e) => {
+    e.preventDefault()
 
-  useEffect(() => {
-    const savedPassword = localStorage.getItem('password')
-    if (savedPassword !== null) {
-      setPassword(savedPassword)
-    }
-  }, [])
-
-  const handleChange = (event) => {
-    setPassword(event.target.value)
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-
+    const password = e.target.inputPass.value
     if (password.trim() !== '') {
-      localStorage.setItem('password', password)
+      localStorage.setItem('LOCAL_USERPASS', password)
     }
+
+    window.location.reload()
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input placeholder='Password' type='password' onChange={handleChange} />
+    <form className='p-10' onSubmit={handleSubmit}>
+      <input id='inputPass' className='p-4' placeholder='Password' type='password' />
     </form>
   )
 }

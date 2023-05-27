@@ -1,9 +1,21 @@
 'use client'
 
 import cx from 'clsx'
-import { PromptForm } from 'components'
+import { Login, PromptForm } from 'components'
+import { useEffect, useState } from 'react'
 
 export default function Page() {
+  const [isAuth, setIsAuth] = useState(false)
+
+  useEffect(() => {
+    if (typeof localStorage === 'undefined') return
+    if (localStorage.getItem('LOCAL_USERPASS') === process.env.NEXT_PUBLIC_USERPASS) {
+      setIsAuth(true)
+    }
+  }, [])
+
+  if (!isAuth) return <Login />
+
   const mainCx = cx(
     'Chat',
     'pt-8 pb-12 px-6 lg:px-0 sm:py-10 lg:py-14',
