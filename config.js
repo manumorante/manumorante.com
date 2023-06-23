@@ -11,5 +11,5 @@ export const meta = {
   projects: {
     url: 'https://raw.githubusercontent.com/manumorante/db/main/db.json',
   },
-  ga: 'G-3H2DS46SP4',
+  ga: 'G-SC5LDLNJ0T',
 }
