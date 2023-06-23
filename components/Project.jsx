@@ -1,10 +1,13 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import cx from 'clsx'
 import { GlobeAltIcon, CodeBracketIcon } from '@heroicons/react/24/outline'
-import New from 'components/New'
-import Cover from 'components/Cover'
+import { New, Cover } from 'components'
 import Link from 'next/link'
 
-export default function Project({ project }) {
+export default function Project({ project, index }) {
+  console.log('project', index)
   const url = project?.url || ''
   const cuteUrl = url.replace(/^https?:\/\//, '')
 
@@ -30,8 +33,18 @@ export default function Project({ project }) {
   )
   const iconCx = cx('w-6 h-6 lg:w-5 lg:h-5 text-neutral-400')
 
+  const variants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 50 },
+  }
+
   return (
-    <article className={mainCx}>
+    <motion.article
+      initial={index === 0 ? variants.visible : variants.hidden}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.2, duration: 0.4 }}
+      className={mainCx}>
       <Link href={project?.url} target='_blank' rel='noreferrer'>
         <Cover alt={project?.name} image={project?.image} imageDark={project?.imageDark} />
       </Link>
@@ -58,6 +71,6 @@ export default function Project({ project }) {
           </Link>
         )}
       </div>
-    </article>
+    </motion.article>
   )
 }

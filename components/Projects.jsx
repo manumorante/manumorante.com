@@ -10,7 +10,7 @@ export default async function Projects() {
   return (
     <>
       {published.map((project, i) => (
-        <Project key={i} project={project} />
+        <Project key={i} index={i} project={project} />
       ))}
     </>
   )

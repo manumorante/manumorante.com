@@ -1,6 +1,18 @@
 {
   "projects": [
     {
+      "name": "Minimalist Movie Posters",
+      "id": "minimalist-movie-posters",
+      "published": true,
+      "featured": false,
+      "image": "/projects/minimalist-movie-posters.jpg",
+      "imageDark": "/projects/minimalist-movie-posters.dark.jpg",
+      "description": "Carteles de cine minimalistas creados y animados por código.",
+      "tags": ["movies", "css", "animation"],
+      "url": "https://posters.manumorante.com",
+      "repository": "https://github.com/manumorante/minimalist-movie-posters"
+    },
+    {
       "name": "Mi mi mi",
       "id": "mimimi",
       "published": true,
@@ -35,18 +47,6 @@
       "tags": ["photo", "css", "grid"],
       "url": "https://polaroids.manumorante.com",
       "repository": "https://github.com/manumorante/polaroids"
-    },
-    {
-      "name": "Minimalist Movie Posters",
-      "id": "minimalist-movie-posters",
-      "published": true,
-      "featured": false,
-      "image": "/projects/minimalist-movie-posters.jpg",
-      "imageDark": "/projects/minimalist-movie-posters.dark.jpg",
-      "description": "Carteles de cine minimalistas creados y animados por código.",
-      "tags": ["movies", "css", "animation"],
-      "url": "https://posters.manumorante.com",
-      "repository": "https://github.com/manumorante/minimalist-movie-posters"
     },
     {
       "name": "Raycast DS Utility",
