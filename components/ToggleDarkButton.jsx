@@ -6,10 +6,10 @@ import cx from 'clsx'
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline'
 import { useDark } from 'lib/useDark'
 
-export default function ToggleDarkButton({ className }) {
+export default function ToggleDarkButton() {
   const [isDark, toggleDark] = useDark()
 
-  const mainCx = cx('ToggleDarkButton w-7 h-7 text-slate-400', className)
+  const mainCx = cx('ToggleDarkButton w-7 h-7 text-slate-400', 'fixed top-0 right-0 z-40 m-10')
   const iconCx = cx('absolute', 'w-7 h-7')
 
   const moonHiddenAn = { opacity: 0, x: -28, y: 28 }
@@ -22,7 +22,7 @@ export default function ToggleDarkButton({ className }) {
     <div className={mainCx} onClick={toggleDark}>
       <motion.div
         className={iconCx}
-        initial={moonHiddenAn}
+        initial={{ opacity: 0 }}
         animate={isDark ? moonVisibleAn : moonHiddenAn}
         transition={transition}>
         <MoonIcon />
@@ -30,7 +30,7 @@ export default function ToggleDarkButton({ className }) {
 
       <motion.div
         className={iconCx}
-        initial={sunHiddenAn}
+        initial={{ opacity: 0 }}
         animate={isDark ? sunHiddenAn : sunVisibleAn}
         transition={transition}>
         <SunIcon />

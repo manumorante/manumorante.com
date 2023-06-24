@@ -32,18 +32,16 @@ export default function Project({ project, index }) {
   )
   const iconCx = cx('w-6 h-6 lg:w-5 lg:h-5 text-slate-400')
 
-  const variants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: 50 },
-  }
+  const visibleAn = { opacity: 1, y: 0 }
+  const hiddenAn = { opacity: 0, y: 50 }
 
   return (
     <motion.article
       className={mainCx}
-      initial={index === 0 ? variants.visible : variants.hidden}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={index === 0 ? visibleAn : hiddenAn}
+      whileInView={visibleAn}
       viewport={{ once: true }}
-      transition={{ duration: 0.4 }}>
+      transition={{ delay: 0.2, duration: 0.6 }}>
       <Link href={project?.url} target='_blank' rel='noreferrer'>
         <Cover alt={project?.name} image={project?.image} imageDark={project?.imageDark} />
       </Link>
@@ -51,6 +49,7 @@ export default function Project({ project, index }) {
       <div className={contentCx}>
         <h3 className={nameCx}>
           <span>{project.name}</span>
+
           {project.featured && <New />}
         </h3>
 

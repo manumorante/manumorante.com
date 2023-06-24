@@ -1,14 +1,23 @@
-'use client'
-
 import cx from 'clsx'
+
 import Projects from 'components/Projects'
 
 export default function Home() {
-  const projectsCx = cx('flex flex-col gap-20 pb-20')
+  const mainCx = cx(
+    'Main',
+    'relative z-20',
+    'max-w-3xl mx-auto',
+    'bg-white dark:bg-slate-700',
+    'shadow/75'
+  )
+
+  const projectsCx = cx('flex flex-col gap-20 pb-40')
 
   return (
     <>
-      <Projects className={projectsCx} />
+      <main className={mainCx}>
+        <Projects className={projectsCx} />
+      </main>
     </>
   )
 }
