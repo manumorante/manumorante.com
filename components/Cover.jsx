@@ -4,8 +4,9 @@ import Image from 'next/image'
 export default function Cover({ alt = 'Project', image, imageDark }) {
   if (!image) return null
 
-  const lightCx = cx('object-cover', { 'block dark:hidden': imageDark })
-  const darkCx = cx('object-cover', 'hidden dark:block')
+  const baseCx = cx('object-cover md:rounded-2xl')
+  const lightCx = cx(baseCx, { 'block dark:hidden': imageDark })
+  const darkCx = cx(baseCx, 'hidden dark:block')
 
   return (
     <>

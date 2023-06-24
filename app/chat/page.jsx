@@ -19,9 +19,9 @@ export default function Page() {
   const mainCx = cx(
     'Chat',
     'pt-8 pb-12 px-6 lg:px-0 sm:py-10 lg:py-14',
-    'text-2xl font-extralight text-neutral-400 md:leading-relaxed'
+    'text-2xl font-extralight text-slate-400 md:leading-relaxed'
   )
-  const subtitleCx = cx('text-2xl font-light text-neutral-500 dark:text-neutral-300 mb-3')
+  const subtitleCx = cx('text-2xl font-light text-slate-500 dark:text-slate-300 mb-3')
 
   return (
     <div className={mainCx}>

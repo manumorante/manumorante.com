@@ -11,11 +11,11 @@ export default function PromptForm({ placeholder = '', template = '', actionName
   const templateCx = 'whitespace-pre-line'
   const formCx = 'w-full block mb-4 flex flex-col gap-4 items-end'
   const textareaCx =
-    'block w-full p-3 rounded-lg border-2 sm:border-4 focus:outline-none resize-none bg-neutral-50 border-neutral-200 focus:bg-white focus:border-green-500 dark:bg-neutral-800 dark:border-neutral-600/50 dark:focus:bg-neutral-800 dark:focus:border-neutral-600'
+    'block w-full p-3 rounded-lg border-2 sm:border-4 focus:outline-none resize-none bg-slate-50 border-slate-200 focus:bg-white focus:border-green-500 dark:bg-slate-800 dark:border-slate-600/50 dark:focus:bg-slate-800 dark:focus:border-slate-600'
   const buttonCx =
-    'py-3 px-4 text-base rounded-lg  bg-neutral-300 dark:bg-neutral-700 text-neutral-500 font-semibold'
+    'py-3 px-4 text-base rounded-lg  bg-slate-300 dark:bg-slate-700 text-slate-500 font-semibold'
   const responseBoxCx = 'p-4'
-  const responseCx = 'text-2xl text-neutral-500 whitespace-pre-line'
+  const responseCx = 'text-2xl text-slate-500 whitespace-pre-line'
 
   function addUserPrompt(template, userPrompt) {
     if (!template) return userPrompt

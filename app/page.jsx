@@ -1,13 +1,14 @@
-import { Statement, Projects } from 'components'
+'use client'
+
+import cx from 'clsx'
+import Projects from 'components/Projects'
 
 export default function Home() {
+  const projectsCx = cx('flex flex-col gap-20 pb-20')
+
   return (
     <>
-      <Statement />
-
-      <div className='Projects flex flex-col gap-20 min-h-screen'>
-        <Projects />
-      </div>
+      <Projects className={projectsCx} />
     </>
   )
 }

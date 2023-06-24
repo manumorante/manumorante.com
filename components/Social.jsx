@@ -11,8 +11,8 @@ function Item({ icon, label, href }) {
         'SocialItem',
         'flex flex-col sm:flex-row items-center gap-1 py-3',
         'font-medium',
-        'text-neutral-400',
-        'sm:hover:text-neutral-600 sm:dark:hover:text-neutral-300'
+        'text-slate-400',
+        'sm:hover:text-slate-600 sm:dark:hover:text-slate-300'
       )}>
       <span className='w-6 h-6'>{icon}</span>
       <span className='text-sm sm:text-base font-light overflow-hidden'>{label}</span>
@@ -21,10 +21,10 @@ function Item({ icon, label, href }) {
 }
 
 export default function Social({ className }) {
-  const mainCx = cx('Social flex sm:flex-col justify-between', className)
+  const mainCx = cx('Social flex justify-evenly', className)
 
   return (
-    <aside className={mainCx}>
+    <div className={mainCx}>
       <Item icon={<CodeBracketIcon />} label='Github' href='https://github.com/manumorante' />
       <Item icon={<BeakerIcon />} label='Codepen' href='https://codepen.io/manumorante' />
       <Item icon={<PhotoIcon />} label='Instagram' href='https://www.instagram.com/manu.morante' />
@@ -33,6 +33,6 @@ export default function Social({ className }) {
         label='LinkedIn'
         href='https://es.linkedin.com/in/manumorante'
       />
-    </aside>
+    </div>
   )
 }

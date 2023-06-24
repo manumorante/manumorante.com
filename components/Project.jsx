@@ -7,7 +7,6 @@ import { New, Cover } from 'components'
 import Link from 'next/link'
 
 export default function Project({ project, index }) {
-  console.log('project', index)
   const url = project?.url || ''
   const cuteUrl = url.replace(/^https?:\/\//, '')
 
@@ -15,23 +14,23 @@ export default function Project({ project, index }) {
   const cuteRepository = repository.split('/').at(-1)
 
   const mainCx = 'Project'
-  const contentCx = cx('Content', 'mt-4 px-6 lg:px-0')
+  const contentCx = cx('Content', 'p-7 sm:p-9')
   const nameCx = cx(
     'Name',
     'flex items-center gap-2',
-    'font-medium text-xl text-neutral-800 dark:text-neutral-100'
+    'font-medium text-2xl text-slate-800 dark:text-slate-100'
   )
   const descriptionCx = cx(
     'Description',
-    'text-2xl lg:text-xl text-neutral-600 dark:text-neutral-300 font-light mb-6'
+    'text-2xl lg:text-xl text-slate-600 dark:text-slate-300 font-light mb-6'
   )
   const mediaCx = cx('Media', 'flex gap-1 items-center')
   const linkCx = cx(
     'Link',
-    'block my-1 hover:underline underline-offset-2 text-md text-neutral-400',
+    'block my-1 hover:underline underline-offset-2 text-md text-slate-400',
     mediaCx
   )
-  const iconCx = cx('w-6 h-6 lg:w-5 lg:h-5 text-neutral-400')
+  const iconCx = cx('w-6 h-6 lg:w-5 lg:h-5 text-slate-400')
 
   const variants = {
     visible: { opacity: 1, y: 0 },
@@ -40,11 +39,11 @@ export default function Project({ project, index }) {
 
   return (
     <motion.article
+      className={mainCx}
       initial={index === 0 ? variants.visible : variants.hidden}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: 0.2, duration: 0.4 }}
-      className={mainCx}>
+      transition={{ duration: 0.4 }}>
       <Link href={project?.url} target='_blank' rel='noreferrer'>
         <Cover alt={project?.name} image={project?.image} imageDark={project?.imageDark} />
       </Link>

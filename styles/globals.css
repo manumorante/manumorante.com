@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-neutral-600 dark:text-neutral-400 
-    bg-white dark:bg-neutral-800;
+    @apply text-slate-600 dark:text-slate-400 
+    bg-white dark:bg-slate-700;
   }
 }
