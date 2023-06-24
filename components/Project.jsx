@@ -1,74 +1,61 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import cx from 'clsx'
-import { GlobeAltIcon, CodeBracketIcon } from '@heroicons/react/24/outline'
-import { New, Cover } from 'components'
-import Link from 'next/link'
 
-export default function Project({ project, index }) {
-  const url = project?.url || ''
-  const cuteUrl = url.replace(/^https?:\/\//, '')
+import { Cover, New } from 'components'
+import { useRef } from 'react'
 
-  const repository = project?.repository || '/'
-  const cuteRepository = repository.split('/').at(-1)
+function useParallax(value, distance) {
+  return useTransform(value, [0, 1], [-distance, distance])
+}
 
-  const mainCx = 'Project'
-  const contentCx = cx('Content', 'p-7 sm:p-9')
+export default function Project({ name, description, url, image, imageDark, featured }) {
+  const ref = useRef(null)
+  const { scrollYProgress } = useScroll({ target: ref })
+  const y = useParallax(scrollYProgress, 40)
+
+  const mainCx = cx('Project relative w-screen h-[75vh] flex items-center justify-center')
+  const contentCx = 'p-7 sm:p-9'
   const nameCx = cx(
     'Name',
     'flex items-center gap-2',
     'font-medium text-2xl text-slate-800 dark:text-slate-100'
   )
   const descriptionCx = cx(
-    'Description',
-    'text-2xl lg:text-xl text-slate-600 dark:text-slate-300 font-light mb-6'
+    'Description mb-6',
+    'text-2xl lg:text-xl text-slate-600 dark:text-slate-300 font-light'
   )
-  const mediaCx = cx('Media', 'flex gap-1 items-center')
-  const linkCx = cx(
-    'Link',
-    'block my-1 hover:underline underline-offset-2 text-md text-slate-400',
-    mediaCx
+  const coverCx = cx(
+    'Cover block w-full h-auto aspect-og bg-slate-500/50 md:rounded-2xl overflow-hidden'
   )
-  const iconCx = cx('w-6 h-6 lg:w-5 lg:h-5 text-slate-400')
 
-  const visibleAn = { opacity: 1, y: 0 }
-  const hiddenAn = { opacity: 0, y: 50 }
+  const coverBgCx = cx(
+    'CoverBg absolute inset-0 z-0',
+    'bg-fixed bg-cover bg-center blur-2xl opacity-30'
+  )
 
   return (
-    <motion.article
-      className={mainCx}
-      initial={index === 0 ? visibleAn : hiddenAn}
-      whileInView={visibleAn}
-      viewport={{ once: true }}
-      transition={{ delay: 0.2, duration: 0.6 }}>
-      <Link href={project?.url} target='_blank' rel='noreferrer'>
-        <Cover alt={project?.name} image={project?.image} imageDark={project?.imageDark} />
-      </Link>
+    <article className={mainCx}>
+      <div className={coverBgCx} style={{ backgroundImage: `url(${image})` }} />
 
-      <div className={contentCx}>
-        <h3 className={nameCx}>
-          <span>{project.name}</span>
+      <div className='relative z-10 w-full max-w-3xl'>
+        <motion.div style={{ y }}>
+          <a className={coverCx} ref={ref} href={url} target='_blank' rel='noreferrer'>
+            <Cover alt={name} image={image} imageDark={imageDark} />
+          </a>
+        </motion.div>
 
-          {project.featured && <New />}
-        </h3>
+        <div className={contentCx}>
+          <h3 className={nameCx}>
+            <span>{name}</span>
 
-        <h4 className={descriptionCx}>{project.description}</h4>
+            {featured && <New />}
+          </h3>
 
-        {project?.url && (
-          <Link className={linkCx} href={url} target='_blank' rel='noreferrer'>
-            <GlobeAltIcon className={iconCx} />
-            {cuteUrl}
-          </Link>
-        )}
-
-        {project?.repository && (
-          <Link className={linkCx} href={project.repository} target='_blank' rel='noreferrer'>
-            <CodeBracketIcon className={iconCx} />
-            {cuteRepository}
-          </Link>
-        )}
+          <h4 className={descriptionCx}>{description}</h4>
+        </div>
       </div>
-    </motion.article>
+    </article>
   )
 }

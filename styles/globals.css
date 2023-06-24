@@ -3,8 +3,9 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
+  html,
   body {
-    @apply text-slate-600 dark:text-slate-400 
+    @apply w-full h-full min-h-screen text-slate-600 dark:text-slate-400 
     bg-white dark:bg-slate-700;
   }
 }

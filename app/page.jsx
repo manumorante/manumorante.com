@@ -1,23 +1,21 @@
-import cx from 'clsx'
+// This can go to a server js I think.
+import data from 'projects.json'
+const projects = data.projects.filter((project) => project.published)
 
-import Projects from 'components/Projects'
+import Project from 'components/Project'
 
 export default function Home() {
-  const mainCx = cx(
-    'Main',
-    'relative z-20',
-    'max-w-3xl mx-auto',
-    'bg-white dark:bg-slate-700',
-    'shadow/75'
-  )
+  if (projects?.length <= 0) return null
 
-  const projectsCx = cx('flex flex-col gap-20 pb-40')
+  const mainCx = 'Main relative z-20 bg-white dark:bg-slate-700'
 
   return (
-    <>
-      <main className={mainCx}>
-        <Projects className={projectsCx} />
-      </main>
-    </>
+    <main className={mainCx}>
+      <div className='Projects'>
+        {projects.map((project, i) => (
+          <Project key={i} {...project} />
+        ))}
+      </div>
+    </main>
   )
 }

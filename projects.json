@@ -12,18 +12,7 @@
       "url": "https://posters.manumorante.com",
       "repository": "https://github.com/manumorante/minimalist-movie-posters"
     },
-    {
-      "name": "Mi mi mi",
-      "id": "mimimi",
-      "published": true,
-      "featured": false,
-      "image": "/projects/mimimi.jpg",
-      "imageDark": "/projects/mimimi.dark.jpg",
-      "description": "Convierte texto a \"mi mi mi\" y compártelo como enlace a alguien.",
-      "tags": ["funny", "mimificador"],
-      "url": "https://mimimi.manumorante.com",
-      "repository": "https://github.com/manumorante/mimimi"
-    },
+
     {
       "name": "Mordisco Club",
       "id": "mordisco.club",
@@ -47,6 +36,18 @@
       "tags": ["photo", "css", "grid"],
       "url": "https://polaroids.manumorante.com",
       "repository": "https://github.com/manumorante/polaroids"
+    },
+    {
+      "name": "Mi mi mi",
+      "id": "mimimi",
+      "published": true,
+      "featured": false,
+      "image": "/projects/mimimi.jpg",
+      "imageDark": "/projects/mimimi.dark.jpg",
+      "description": "Convierte texto a \"mi mi mi\" y compártelo como enlace a alguien.",
+      "tags": ["funny", "mimificador"],
+      "url": "https://mimimi.manumorante.com",
+      "repository": "https://github.com/manumorante/mimimi"
     },
     {
       "name": "Raycast DS Utility",

@@ -16,6 +16,9 @@ module.exports = {
       spacing: {
         sidebar: '210px',
       },
+      aspectRatio: {
+        og: '1200/628',
+      },
     },
   },
   plugins: [],
