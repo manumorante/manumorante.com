@@ -7,15 +7,11 @@ import Project from 'components/Project'
 export default function Home() {
   if (projects?.length <= 0) return null
 
-  const mainCx = 'Main relative z-20 bg-white dark:bg-slate-700'
-
   return (
-    <main className={mainCx}>
-      <div className='Projects'>
-        {projects.map((project, i) => (
-          <Project key={i} {...project} />
-        ))}
-      </div>
+    <main>
+      {projects.map((project, i) => (
+        <Project key={i} {...project} />
+      ))}
     </main>
   )
 }

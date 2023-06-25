@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
 import cx from 'clsx'
 
 import { Cover, New } from 'components'
@@ -12,10 +12,14 @@ function useParallax(value, distance) {
 
 export default function Project({ name, description, url, image, imageDark, featured }) {
   const ref = useRef(null)
-  const { scrollYProgress } = useScroll({ target: ref })
-  const y = useParallax(scrollYProgress, 40)
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'end start'],
+  })
+  const y = useParallax(scrollYProgress, 60)
+  const opacity = useTransform(scrollYProgress, [0, 0.7, 1], [0, 1, 0])
 
-  const mainCx = cx('Project relative w-screen h-[75vh] flex items-center justify-center')
+  const mainCx = cx('Project w-full h-[75vh] flex items-center justify-center')
   const contentCx = 'p-7 sm:p-9'
   const nameCx = cx(
     'Name',
@@ -30,23 +34,14 @@ export default function Project({ name, description, url, image, imageDark, feat
     'Cover block w-full h-auto aspect-og bg-slate-500/50 md:rounded-2xl overflow-hidden'
   )
 
-  const coverBgCx = cx(
-    'CoverBg absolute inset-0 z-0',
-    'bg-fixed bg-cover bg-center blur-2xl opacity-30'
-  )
-
   return (
-    <article className={mainCx}>
-      <div className={coverBgCx} style={{ backgroundImage: `url(${image})` }} />
-
+    <article className={mainCx} ref={ref}>
       <div className='relative z-10 w-full max-w-3xl'>
-        <motion.div style={{ y }}>
-          <a className={coverCx} ref={ref} href={url} target='_blank' rel='noreferrer'>
-            <Cover alt={name} image={image} imageDark={imageDark} />
-          </a>
-        </motion.div>
+        <a className={coverCx} href={url} target='_blank' rel='noreferrer'>
+          <Cover alt={name} image={image} imageDark={imageDark} />
+        </a>
 
-        <div className={contentCx}>
+        <motion.div className={contentCx} style={{ y, opacity }}>
           <h3 className={nameCx}>
             <span>{name}</span>
 
@@ -54,7 +49,7 @@ export default function Project({ name, description, url, image, imageDark, feat
           </h3>
 
           <h4 className={descriptionCx}>{description}</h4>
-        </div>
+        </motion.div>
       </div>
     </article>
   )

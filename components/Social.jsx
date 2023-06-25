@@ -23,11 +23,8 @@ function Item({ icon, label, href }) {
 export default function Social() {
   const mainCx = cx(
     'Social flex justify-evenly',
-    'sticky bottom-0 w-full z-10',
-    'md:relative',
-    'h-40 flex items-center',
-    'bg-slate-50',
-    'shadow/75'
+    'w-full h-40 flex items-center',
+    'bg-white/10 dark:bg-black'
   )
 
   return (
