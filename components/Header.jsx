@@ -10,7 +10,7 @@ export default function Header() {
   const [avatarAn, setAvatarAn] = useState(false)
   const [helloAn, setHelloAn] = useState(false)
 
-  const mainCx = cx('Header w-full h-[80vh] max-w-3xl mx-auto overflow-hidden')
+  const mainCx = cx('Header w-full h-[60vh] max-w-3xl mx-auto overflow-hidden')
   const avatarCx = cx('Avatar block w-24 h-24 mm:w-32 mm:h-32 ml-6 mt-8 sm:ml-8')
   const avatarImageCx = cx('AvatarImage w-24 h-24 mm:w-32 mm:h-32 rounded-full')
   const avatarHiddenAn = { opacity: 0, y: -120 }

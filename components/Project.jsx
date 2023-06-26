@@ -21,14 +21,16 @@ export default function Project({ name, description, url, image, imageDark, feat
 
   const coverCx = cx('Cover relative z-10 block w-full h-auto aspect-og')
   const contentCx = 'relative z-0 p-7 sm:p-9'
-  const descriptionCx = cx(
-    'Description mb-6',
-    'text-2xl lg:text-xl text-slate-600 dark:text-slate-300 font-light'
-  )
+
   const nameCx = cx(
     'Name',
     'flex items-center gap-2',
-    'font-medium text-2xl text-slate-800 dark:text-slate-100'
+    'font-medium text-xl mm:text-2xl text-slate-800 dark:text-slate-100'
+  )
+
+  const descriptionCx = cx(
+    'Description mb-6',
+    'text-xl mm:text-2xl lg:text-xl text-slate-600 dark:text-slate-300 font-light'
   )
 
   return (

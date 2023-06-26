@@ -24,7 +24,12 @@ export default function ToggleDarkButton() {
   const transition = { duration: 1, type: 'spring', bounce: 0 }
 
   return (
-    <div className={mainCx} onClick={toggleDark}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 2, duration: 1 }}
+      className={mainCx}
+      onClick={toggleDark}>
       <motion.div
         className={moonCx}
         initial={{ opacity: 0 }}
@@ -40,6 +45,6 @@ export default function ToggleDarkButton() {
         transition={transition}>
         <SunIcon />
       </motion.div>
-    </div>
+    </motion.div>
   )
 }
