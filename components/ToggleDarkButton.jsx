@@ -9,7 +9,10 @@ import { useDark } from 'lib/useDark'
 export default function ToggleDarkButton() {
   const [isDark, toggleDark] = useDark()
 
-  const mainCx = cx('ToggleDarkButton w-7 h-7 text-slate-400', 'fixed top-10 right-10 z-40')
+  const mainCx = cx(
+    'ToggleDarkButton w-7 h-7 text-slate-400',
+    'fixed top-6 right-6 mm:top-10 mm:right-10 z-40'
+  )
   const iconCx = 'absolute w-7 h-7'
   const moonCx = cx(iconCx, 'top-0')
   const sunCx = cx(iconCx, 'bottom-0')

@@ -14,7 +14,7 @@ export default function Project({ name, description, url, image, imageDark, feat
   })
   const opacity = useTransform(scrollYProgress, [0.1, 0.5, 0.9], [0, 1, 0])
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.7, 1, 0.7])
-  const contentY = useTransform(scrollYProgress, [0, 0.5, 1], ['-100%', '0%', '-100%'])
+  const contentY = useTransform(scrollYProgress, [0, 0.5, 0.7, 1], ['-100%', '0%', '0%', '-100%'])
   const shadow = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0])
 
   const mainCx = cx('Project relative z-10 w-full max-w-3xl mx-auto px-3 ')
