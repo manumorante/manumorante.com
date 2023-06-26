@@ -1,4 +1,5 @@
 import cx from 'clsx'
+import { containerCx } from 'styles/globals.js'
 import { CodeBracketIcon, BeakerIcon, PhotoIcon, BriefcaseIcon } from '@heroicons/react/24/outline'
 
 function Item({ icon, label, href }) {
@@ -22,21 +23,30 @@ function Item({ icon, label, href }) {
 
 export default function Social() {
   const mainCx = cx(
-    'Social flex justify-evenly',
-    'w-full h-40 flex items-center',
-    'bg-white/10 dark:bg-black'
+    'Social',
+    'w-full h-40',
+    // Background
+    'bg-neutral-500/10 dark:bg-black/10'
   )
+
+  const contentCx = cx(containerCx, 'h-full flex justify-evenly items-center')
 
   return (
     <div className={mainCx}>
-      <Item icon={<CodeBracketIcon />} label='Github' href='https://github.com/manumorante' />
-      <Item icon={<BeakerIcon />} label='Codepen' href='https://codepen.io/manumorante' />
-      <Item icon={<PhotoIcon />} label='Instagram' href='https://www.instagram.com/manu.morante' />
-      <Item
-        icon={<BriefcaseIcon />}
-        label='LinkedIn'
-        href='https://es.linkedin.com/in/manumorante'
-      />
+      <div className={contentCx}>
+        <Item icon={<CodeBracketIcon />} label='Github' href='https://github.com/manumorante' />
+        <Item icon={<BeakerIcon />} label='Codepen' href='https://codepen.io/manumorante' />
+        <Item
+          icon={<PhotoIcon />}
+          label='Instagram'
+          href='https://www.instagram.com/manu.morante'
+        />
+        <Item
+          icon={<BriefcaseIcon />}
+          label='LinkedIn'
+          href='https://es.linkedin.com/in/manumorante'
+        />
+      </div>
     </div>
   )
 }

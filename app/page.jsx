@@ -8,10 +8,10 @@ export default function Home() {
   if (projects?.length <= 0) return null
 
   return (
-    <main>
+    <>
       {projects.map((project, i) => (
         <Project key={i} {...project} />
       ))}
-    </main>
+    </>
   )
 }
