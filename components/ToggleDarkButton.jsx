@@ -3,48 +3,55 @@
 import { motion } from 'framer-motion'
 
 import cx from 'clsx'
-import { MoonIcon, SunIcon } from '@heroicons/react/24/outline'
 import { useDark } from 'lib/useDark'
 
 export default function ToggleDarkButton() {
   const [isDark, toggleDark] = useDark()
 
   const mainCx = cx(
-    'ToggleDarkButton w-7 h-7 text-slate-400',
-    'fixed top-6 right-6 mm:top-10 mm:right-10 z-40'
+    'ToggleDark',
+    'absolute top-6 right-6 mm:top-10 mm:right-10',
+    'w-7 h-7',
+    'text-slate-400',
+    'cursor-pointer'
   )
-  const iconCx = 'absolute w-7 h-7'
-  const moonCx = cx(iconCx, 'top-0')
-  const sunCx = cx(iconCx, 'bottom-0')
 
-  const moonHiddenAn = { opacity: 0, x: -28, y: 28 }
-  const moonVisibleAn = { opacity: 1, x: 0, y: 0 }
-  const sunHiddenAn = { opacity: 0, x: 28, y: -28 }
-  const sunVisibleAn = { opacity: 1, x: 0, y: 0 }
-  const transition = { duration: 1, type: 'spring', bounce: 0 }
+  const draw = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: {
+      pathLength: 1,
+      opacity: 1,
+      transition: {
+        pathLength: { delay: 0.2, type: 'spring', duration: 1.5, bounce: 0 },
+        opacity: { duration: 0.04 },
+      },
+    },
+  }
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 2, duration: 1 }}
+    <svg
       className={mainCx}
-      onClick={toggleDark}>
-      <motion.div
-        className={moonCx}
-        initial={{ opacity: 0 }}
-        animate={isDark ? moonVisibleAn : moonHiddenAn}
-        transition={transition}>
-        <MoonIcon />
-      </motion.div>
-
-      <motion.div
-        className={sunCx}
-        initial={{ opacity: 0 }}
-        animate={isDark ? sunHiddenAn : sunVisibleAn}
-        transition={transition}>
-        <SunIcon />
-      </motion.div>
-    </motion.div>
+      onClick={toggleDark}
+      viewBox='0 0 28 28'
+      strokeWidth={2}
+      stroke='currentColor'
+      fill='none'>
+      <motion.path
+        initial={'hidden'}
+        animate={isDark ? 'visible' : 'hidden'}
+        variants={draw}
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z'
+      />
+      <motion.path
+        initial={'hidden'}
+        animate={isDark ? 'hidden' : 'visible'}
+        variants={draw}
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        d='M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z'
+      />
+    </svg>
   )
 }

@@ -6,21 +6,24 @@ import cx from 'clsx'
 import { Cover, New } from 'components'
 import { useRef } from 'react'
 
-export default function Project({ name, description, url, image, imageDark, featured }) {
+export default function Project({ name, description, url, image, imageDark, featured, colors }) {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start end', 'end start'],
   })
-  const opacity = useTransform(scrollYProgress, [0.1, 0.5, 0.9], [0, 1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.7, 1, 0.7])
-  const contentY = useTransform(scrollYProgress, [0, 0.5, 0.7, 1], ['-100%', '0%', '0%', '-100%'])
-  const shadow = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0])
+  const scrollA = [0, 0.3, 0.7, 1]
+  const opacity = useTransform(scrollYProgress, scrollA, [0, 1, 1, 1])
+  const scale = useTransform(scrollYProgress, scrollA, [0.7, 1, 1, 1])
+  const contentY = useTransform(
+    scrollYProgress,
+    [0, 0.4, 0.6, 0.8, 1],
+    ['-100%', '-100%', '0%', '0%', '-100%']
+  )
 
-  const mainCx = cx('Project relative z-10 w-full max-w-3xl mx-auto px-3 ')
-
+  const mainCx = cx('Project relative overflow-hidden z-10 w-full max-w-3xl mx-auto mb-12')
   const coverCx = cx('Cover relative z-10 block w-full h-auto aspect-og')
-  const contentCx = 'relative z-0 p-7 sm:p-9'
+  const contentCx = cx('relative z-0 p-7 sm:p-9')
 
   const nameCx = cx(
     'Name',
@@ -37,7 +40,10 @@ export default function Project({ name, description, url, image, imageDark, feat
     <motion.article style={{ scale, opacity }} className={mainCx} ref={ref}>
       <a className={coverCx} href={url} target='_blank' rel='noreferrer'>
         <Cover alt={name} image={image} imageDark={imageDark} />
-        <motion.div style={{ opacity: shadow }} className='absolute z-0 inset-0 shadow-2xl' />
+        <motion.div
+          style={{ '--tw-shadow-color': colors?.light }}
+          className='absolute z-0 inset-0 shadow-2xl shadow-neutral-500'
+        />
       </a>
 
       <motion.div className={contentCx} style={{ y: contentY }}>

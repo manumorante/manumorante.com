@@ -10,7 +10,11 @@
       "description": "Carteles de cine minimalistas creados y animados por código.",
       "tags": ["movies", "css", "animation"],
       "url": "https://posters.manumorante.com",
-      "repository": "https://github.com/manumorante/minimalist-movie-posters"
+      "repository": "https://github.com/manumorante/minimalist-movie-posters",
+      "colors": {
+        "light": "#6773a6",
+        "dark": "#630d00"
+      }
     },
 
     {
@@ -23,7 +27,11 @@
       "description": "Club website.",
       "tags": ["club"],
       "url": "https://mordisco.club",
-      "repository": "https://github.com/manumorante/mordisco.club"
+      "repository": "https://github.com/manumorante/mordisco.club",
+      "colors": {
+        "light": "#3615d1",
+        "dark": "#630d00"
+      }
     },
     {
       "name": "Polaroids",
@@ -35,7 +43,11 @@
       "description": "Bonitas fotos estilo polaroid expuestas desordenadamente sobre una mesa.",
       "tags": ["photo", "css", "grid"],
       "url": "https://polaroids.manumorante.com",
-      "repository": "https://github.com/manumorante/polaroids"
+      "repository": "https://github.com/manumorante/polaroids",
+      "colors": {
+        "light": "#6e9ec8",
+        "dark": "#630d00"
+      }
     },
     {
       "name": "Mi mi mi",
@@ -47,7 +59,11 @@
       "description": "Convierte texto a \"mi mi mi\" y compártelo como enlace a alguien.",
       "tags": ["funny", "mimificador"],
       "url": "https://mimimi.manumorante.com",
-      "repository": "https://github.com/manumorante/mimimi"
+      "repository": "https://github.com/manumorante/mimimi",
+      "colors": {
+        "light": "#dec38a",
+        "dark": "#630d00"
+      }
     },
     {
       "name": "Raycast DS Utility",
@@ -59,7 +75,11 @@
       "description": "Raycast Extension to manipulate DS Utilities classes.",
       "tags": ["raycast", "tool", "css", "ds"],
       "url": "https://manumorante.github.io/raycast-ds-utilities",
-      "repository": "https://github.com/manumorante/raycast-ds-utilities"
+      "repository": "https://github.com/manumorante/raycast-ds-utilities",
+      "colors": {
+        "light": "#e7c2b5",
+        "dark": "#630d00"
+      }
     },
     {
       "name": "CSS Pen",
@@ -71,7 +91,11 @@
       "description": "Logos famosos en animación paso a paso con CSS.",
       "tags": ["learning", "css", "animation"],
       "url": "https://csspen.es",
-      "repository": "https://github.com/manumorante/csspen.es"
+      "repository": "https://github.com/manumorante/csspen.es",
+      "colors": {
+        "light": "#3b5998",
+        "dark": "#630d00"
+      }
     },
 
     {
@@ -84,7 +108,11 @@
       "description": "Mi versión de una web de cine con diseño inspirado en Letterboxd y que me ha servido para practicar con arquitecturas limpias.",
       "tags": ["movies", "cinema"],
       "url": "https://scenic.manumorante.com",
-      "repository": "https://github.com/manumorante/scenic"
+      "repository": "https://github.com/manumorante/scenic",
+      "colors": {
+        "light": "#99bd72",
+        "dark": "#630d00"
+      }
     },
 
     {
