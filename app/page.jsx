@@ -1,8 +1,7 @@
-import cx from 'clsx'
 // This can go to a server js I think.
 import data from 'projects.json'
 const projects = data.projects.filter((project) => project.published)
-import { Header } from 'components'
+import cx from 'clsx'
 
 import Project from 'components/Project'
 
@@ -13,7 +12,6 @@ export default function Home() {
 
   return (
     <div className={mainCx}>
-      <Header />
       {projects.map((project, i) => (
         <Project key={i} {...project} />
       ))}

@@ -1,5 +1,4 @@
 import cx from 'clsx'
-import { containerCx } from 'styles/globals.js'
 import { CodeBracketIcon, BeakerIcon, PhotoIcon, BriefcaseIcon } from '@heroicons/react/24/outline'
 
 function Item({ icon, label, href }) {
@@ -27,7 +26,7 @@ export default function Social() {
   )
 
   const contentCx = cx(
-    containerCx,
+    'w-full max-w-3xl mx-auto',
     'flex flex-col sm:flex-row gap-10 sm:gap-12 p-10 sm:justify-center'
   )
 

@@ -1,8 +1,8 @@
 import { meta } from 'config'
 import 'styles/globals.css'
 import Image from 'next/image'
-
-import { Footer, Social } from 'components'
+import { Header } from 'components'
+import { Social } from 'components'
 
 export default function RootLayout({ children }) {
   return (
@@ -18,6 +18,8 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
+        
+        <Header />
         {children}
         <Image
           className='Avatar block w-24 h-24 ml-8 sm:ml-auto sm:mr-auto mt-20 mb-10 sm:mb-20 rounded-full '
@@ -28,7 +30,9 @@ export default function RootLayout({ children }) {
           alt='Manu Morante'
         />
         <Social />
-        <Footer />
+        <footer className='Footer w-full py-20 text-center font-medium opacity-50'>
+          © 2023 Manu Morante
+        </footer>
       </body>
     </html>
   )

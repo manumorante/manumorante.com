@@ -1,8 +1,8 @@
 import cx from 'clsx'
 
-import { Cover, New } from 'components'
+import Cover from './Cover'
 
-export default function Project({ name, description, url, image, imageDark, featured }) {
+export default function Project({ name, description, url, image, imageDark }) {
   const mainCx = cx(
     'Project',
     // Block
@@ -24,8 +24,6 @@ export default function Project({ name, description, url, image, imageDark, feat
       <div className={contentCx}>
         <h3 className={nameCx}>
           <span>{name}</span>
-
-          {featured && <New />}
         </h3>
 
         <h4 className={descriptionCx}>{description}</h4>

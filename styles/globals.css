@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --foreground: #000;
+  --foreground: #1f2937; /* text-gray-800 */
   --background: #e5e7eb; /* bg-gray-200 */
   --primary: #3b82f6; /* text-blue-500 */
   --secondary: #f59e0b; /* text-yellow-500 */
