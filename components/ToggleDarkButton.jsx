@@ -1,12 +1,11 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useCycle } from 'framer-motion'
 
 import cx from 'clsx'
-import { useDark } from 'lib/useDark'
 
 export default function ToggleDarkButton() {
-  const [isDark, toggleDark] = useDark()
+  const [isDark, toggleDark] = useCycle(false, true)
 
   const mainCx = cx(
     'ToggleDark',

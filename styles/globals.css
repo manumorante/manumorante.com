@@ -2,16 +2,22 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@layer base {
-  html,
-  body {
-    @apply w-full h-full;
-  }
+:root {
+  --foreground: #000;
+  --background: #e5e7eb; /* bg-gray-200 */
+  --primary: #3b82f6; /* text-blue-500 */
+  --secondary: #f59e0b; /* text-yellow-500 */
+  --neutral: #6b7280; /* text-gray-500 */
+}
 
-  html {
-    @apply text-slate-600 bg-white transition-colors duration-200;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #fff;
+    --background: #000;
   }
-  html.dark {
-    @apply text-slate-400 bg-slate-700;
-  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
 }

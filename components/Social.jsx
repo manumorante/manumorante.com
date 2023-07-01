@@ -4,11 +4,10 @@ import { CodeBracketIcon, BeakerIcon, PhotoIcon, BriefcaseIcon } from '@heroicon
 
 function Item({ icon, label, href }) {
   const mainCx = cx(
-    'Item',
+    'Item', //
     'flex items-center gap-3',
     'font-medium',
-    'text-slate-400',
-    'sm:hover:text-slate-600 sm:dark:hover:text-slate-300'
+    'sm:opacity-50 sm:hover:opacity-80'
   )
 
   const nameCx = cx('Name text-base font-light overflow-hidden')
@@ -24,10 +23,13 @@ export default function Social() {
   const mainCx = cx(
     'Social',
     // Background
-    'bg-neutral-500/10 dark:bg-black/10'
+    'bg-neutral-500/10'
   )
 
-  const contentCx = cx(containerCx, 'p-10 space-y-12')
+  const contentCx = cx(
+    containerCx,
+    'flex flex-col sm:flex-row gap-10 sm:gap-12 p-10 sm:justify-center'
+  )
 
   return (
     <div className={mainCx}>
