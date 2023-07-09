@@ -21,8 +21,6 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
 
-        <SpacerLines />
-
         <Image
           className='Avatar block w-24 h-24 ml-8 sm:ml-auto sm:mr-auto mt-20 mb-10 sm:mb-20 rounded-full '
           src='https://secure.gravatar.com/avatar/3d6f5d17df19913a7a7970923563710e?s=256'

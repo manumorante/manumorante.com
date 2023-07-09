@@ -10,7 +10,7 @@ export default function Header() {
   const { scrollYProgress } = useScroll({ target, offset: ['start', 'end start'] })
 
   const waveY = useTransform(scrollYProgress, [0, 1], [0, 600])
-  const waveOpacity = useTransform(scrollYProgress, [0, 0.8, 1], [0.5, 0.5, 0])
+  const waveOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.5, 0.5, 0])
 
   const mainCx = cx('Header relative w-full')
   const containerCx = cx('max-w-3xl mx-auto px-4 mm:px-6')
@@ -20,7 +20,10 @@ export default function Header() {
     'Hi',
     'w-0', // To force the text to be in one line
     'text-7xl mm:text-8xl font-black leading-none',
-    'text-neutral-500 [&_strong]:text-white'
+    // Light
+    'text-neutral-800 [&_strong]:text-neutral-500',
+    //
+    'dark:text-neutral-500 dark:[&_strong]:text-white'
   )
   const lookCx = cx('Look text-5xl mm:text-6xl font-extralight')
 
