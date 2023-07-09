@@ -20,9 +20,9 @@ function Item({ icon, label, href }) {
 
 export default function Social() {
   const mainCx = cx(
-    'Social',
+    'Social'
     // Background
-    'bg-neutral-500/10'
+    // 'bg-neutral-100/50 dark:bg-neutral-700/10'
   )
 
   const contentCx = cx(

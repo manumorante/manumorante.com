@@ -1,8 +1,8 @@
 import { meta } from 'config'
 import 'styles/globals.css'
 import Image from 'next/image'
-import { Header } from 'components'
-import { Social } from 'components'
+import { Header, Social } from '@/components'
+import { Spacer, SpacerLines } from '@/components/Spacer'
 
 export default function RootLayout({ children }) {
   return (
@@ -18,9 +18,11 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
-        
         <Header />
         {children}
+
+        <SpacerLines />
+
         <Image
           className='Avatar block w-24 h-24 ml-8 sm:ml-auto sm:mr-auto mt-20 mb-10 sm:mb-20 rounded-full '
           src='https://secure.gravatar.com/avatar/3d6f5d17df19913a7a7970923563710e?s=256'
@@ -29,10 +31,14 @@ export default function RootLayout({ children }) {
           loading='eager'
           alt='Manu Morante'
         />
+
         <Social />
+
         <footer className='Footer w-full py-20 text-center font-medium opacity-50'>
           © 2023 Manu Morante
         </footer>
+
+        <SpacerLines />
       </body>
     </html>
   )
