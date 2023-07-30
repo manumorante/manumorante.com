@@ -37,7 +37,9 @@ export default function Header() {
   )
 
   // Parallax background
-  const bgCx = cx("fixed -z-10 inset-0 grid place-items-center")
+  const bgCx = cx(
+    "fixed -z-10 top-0 w-full min-safe-h-screen grid place-items-center"
+  )
   const imgCx = cx("w-full h-[400px] sm:h-[600px]")
 
   return (
