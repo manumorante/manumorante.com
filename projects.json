@@ -49,6 +49,49 @@
         "dark": "#630d00"
       }
     },
+
+    {
+      "name": "Scenic Movies",
+      "id": "scenic",
+      "published": true,
+      "featured": false,
+      "image": "/projects/scenic.jpg",
+      "imageDark": "",
+      "description": "Mi versión de una web de cine con diseño inspirado en Letterboxd y que me ha servido para practicar con arquitecturas limpias.",
+      "tags": ["movies", "cinema"],
+      "url": "https://scenic.manumorante.com",
+      "repository": "https://github.com/manumorante/scenic",
+      "colors": {
+        "light": "#99bd72",
+        "dark": "#630d00"
+      }
+    },
+
+    {
+      "name": "Galería de fotos Masonry",
+      "id": "masonry",
+      "published": true,
+      "featured": false,
+      "image": "/projects/masonry.jpg",
+      "imageDark": "",
+      "description": "Una bonita galería de fotos que aprovecha las ventajas de CSS Grid.",
+      "tags": ["css", "grid", "masonry"],
+      "url": "https://masonry.manumorante.com",
+      "repository": "https://github.com/manumorante/masonry"
+    },
+    {
+      "name": "Streets of Rage",
+      "id": "sor",
+      "published": true,
+      "featured": false,
+      "image": "/projects/sor.png",
+      "imageDark": "",
+      "description": "Introducción del juego adorado Streets of Rage de Sega Megadrive creado y animado todo con código.",
+      "tags": ["retro", "game", "css", "animation"],
+      "url": "https://streets-of-rage.manumorante.com",
+      "repository": "https://github.com/manumorante/streets-of-rage"
+    },
+
     {
       "name": "Mi mi mi",
       "id": "mimimi",
@@ -96,48 +139,6 @@
         "light": "#3b5998",
         "dark": "#630d00"
       }
-    },
-
-    {
-      "name": "Scenic Movies",
-      "id": "scenic",
-      "published": true,
-      "featured": false,
-      "image": "/projects/scenic.jpg",
-      "imageDark": "",
-      "description": "Mi versión de una web de cine con diseño inspirado en Letterboxd y que me ha servido para practicar con arquitecturas limpias.",
-      "tags": ["movies", "cinema"],
-      "url": "https://scenic.manumorante.com",
-      "repository": "https://github.com/manumorante/scenic",
-      "colors": {
-        "light": "#99bd72",
-        "dark": "#630d00"
-      }
-    },
-
-    {
-      "name": "Galería de fotos Masonry",
-      "id": "masonry",
-      "published": true,
-      "featured": false,
-      "image": "/projects/masonry.jpg",
-      "imageDark": "",
-      "description": "Una bonita galería de fotos que aprovecha las ventajas de CSS Grid.",
-      "tags": ["css", "grid", "masonry"],
-      "url": "https://masonry.manumorante.com",
-      "repository": "https://github.com/manumorante/masonry"
-    },
-    {
-      "name": "Streets of Rage",
-      "id": "sor",
-      "published": true,
-      "featured": false,
-      "image": "/projects/sor.png",
-      "imageDark": "",
-      "description": "Introducción del juego adorado Streets of Rage de Sega Megadrive creado y animado todo con código.",
-      "tags": ["retro", "game", "css", "animation"],
-      "url": "https://streets-of-rage.manumorante.com",
-      "repository": "https://github.com/manumorante/streets-of-rage"
     },
 
     {

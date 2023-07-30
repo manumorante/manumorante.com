@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
   --foreground: #1f2937; /* text-gray-800 */
@@ -20,4 +20,8 @@
 body {
   color: var(--foreground);
   background: var(--background);
+}
+
+.container {
+  @apply max-w-sm mx-auto;
 }

@@ -13,6 +13,13 @@ module.exports = {
   theme: {
     screens: screens,
     maxWidth: screens,
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        sm: "0rem",
+      },
+    },
     extend: {
       aspectRatio: {
         og: "1200/628",
