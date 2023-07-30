@@ -1,7 +1,0 @@
-export { default as Cover } from './Cover'
-export { default as Project } from './Project'
-export { default as Social } from './Social'
-export { default as PromptForm } from './PromptForm'
-export { default as Login } from './Login'
-export { default as Header } from './Header'
-export { default as IconLink } from './IconLink'

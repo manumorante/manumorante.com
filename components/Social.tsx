@@ -1,7 +1,7 @@
 import cx from 'clsx'
 import { CodeBracketIcon, BeakerIcon, PhotoIcon, BriefcaseIcon } from '@heroicons/react/24/outline'
 
-function Item({ icon, label, href }) {
+function Item({ icon, label, href }: { icon: React.ReactNode; label: string; href: string }) {
   const mainCx = cx(
     'Item', //
     'flex items-center gap-3',
