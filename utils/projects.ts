@@ -1,4 +1,4 @@
-import data from "@/projects.json"
+import data from "@/public/projects.json"
 import { Project } from "@/types"
 
 export function getProjects(): Project[] {
