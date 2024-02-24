@@ -21,7 +21,7 @@ export default function Project({ project }: { project: Project }) {
 
   const sectionCx = cx("relative w-screen h-screen grid place-items-center")
   const bgCx = cx(
-    "Image absolute top-0 right-0 bottom-0 left-0",
+    "Image absolute right-0 bottom-0 left-0",
     "w-full h-full z-0 object-center object-cover",
     "blur-3xl opacity-20"
   )

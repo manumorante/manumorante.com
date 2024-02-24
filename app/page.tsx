@@ -1,4 +1,3 @@
-import cx from "clsx"
 import Image from "next/image"
 import Header from "@/components/Header"
 import Social from "@/components/Social"

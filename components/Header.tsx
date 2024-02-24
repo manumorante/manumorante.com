@@ -5,7 +5,7 @@ const { src, width, height } = image
 
 import cx from "clsx"
 import { useRef } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion, useScroll } from "framer-motion"
 import { useParallax } from "@/utils/parallax"
 
 export default function Header() {
@@ -14,10 +14,9 @@ export default function Header() {
     target: ref,
     offset: ["start start", "end start"],
   })
-  const opacity = useTransform(scrollYProgress, [0, 0.6, 1], [0.6, 0.6, 0])
-  const y = useParallax(scrollYProgress, 200)
+  const y = useParallax(scrollYProgress, 400)
 
-  const mainCx = cx("Header container")
+  const mainCx = cx("Header relative")
   const containerCx = cx(
     "max-w-3xl mx-auto px-4 mm:px-6 pt-20 sm:pt-40 pb-20 sm:pb-40"
   )
@@ -38,38 +37,36 @@ export default function Header() {
 
   // Parallax background
   const bgCx = cx(
-    "fixed -z-10 top-0 w-full min-safe-h-screen grid place-items-center"
+    "absolute -z-10 top-0 w-full min-safe-h-screen grid place-items-center"
   )
   const imgCx = cx("w-full h-[400px] sm:h-[600px]")
 
   return (
-    <>
-      <div className={mainCx} ref={ref}>
-        <div className={containerCx}>
-          <h2 className={hiCx}>
-            Hi, <strong>you are great</strong>
-            {/* Hola, eres genial */}
-          </h2>
+    <div className={mainCx} ref={ref}>
+      <div className={containerCx}>
+        <h2 className={hiCx}>
+          Hi, <strong>you are great</strong>
+          {/* Hola, eres genial */}
+        </h2>
 
-          <h3 className={lookCx}>
-            Now that you are here,
-            <br />
-            have a look
-            {/* Ya que has venido, echa un vistazo */}
-          </h3>
-        </div>
+        <h3 className={lookCx}>
+          Now that you are here,
+          <br />
+          have a look
+          {/* Ya que has venido, echa un vistazo */}
+        </h3>
       </div>
 
       <div className={bgCx}>
         <motion.img
           className={imgCx}
-          style={{ y, opacity }}
+          style={{ y }}
           src={src}
           width={width}
           height={height}
           alt="Background"
         />
       </div>
-    </>
+    </div>
   )
 }
