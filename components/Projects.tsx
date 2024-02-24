@@ -5,7 +5,7 @@ import Project from "@/components/Project"
 export default function Projects() {
   const projects = getProjects()
 
-  const mainCx = cx("Projects grid grid-cols-1 gap-24 sm:gap-6")
+  const mainCx = cx("Projects grid grid-cols-1")
 
   return (
     <div className={mainCx}>

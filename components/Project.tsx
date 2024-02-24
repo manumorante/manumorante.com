@@ -1,25 +1,13 @@
-"use client"
-
 import cx from "clsx"
 import { Project } from "@/types"
 import Cover from "@/components/Cover"
 import Link from "next/link"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { useParallax } from "@/utils/parallax"
-import { useRef } from "react"
+import Image from "next/image"
 
 export default function Project({ project }: { project: Project }) {
   const { name, description, url, image, imageDark } = project
 
-  const ref = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  })
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0.2, 0])
-  const y = useParallax(scrollYProgress, 200)
-
-  const sectionCx = cx("relative w-screen h-screen grid place-items-center")
+  const sectionCx = cx("relative w-full h-[80vh] grid place-items-center")
   const bgCx = cx(
     "Image absolute right-0 bottom-0 left-0",
     "w-full h-full z-0 object-center object-cover",
@@ -40,9 +28,8 @@ export default function Project({ project }: { project: Project }) {
   )
 
   return (
-    <section className={sectionCx} ref={ref}>
-      <motion.img
-        style={{ opacity, y }}
+    <section className={sectionCx}>
+      <Image
         className={bgCx}
         alt=""
         src={project.image}
