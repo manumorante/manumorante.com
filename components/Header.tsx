@@ -1,28 +1,18 @@
-"use client"
-
 import image from "../public/wave-sm.png"
 const { src, width, height } = image
 
 import cx from "clsx"
-import { useRef } from "react"
-import { motion, useScroll } from "framer-motion"
-import { useParallax } from "@/utils/parallax"
 
 export default function Header() {
-  const ref = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  })
-  const y = useParallax(scrollYProgress, 200)
+  const mainCx = cx("Header w-full h-screen py-10 sm:py-16")
 
-  const mainCx = cx("Header pt-16")
+  const waveCx = cx("Wave", "absolute z-0 top-1/2 left-0", "w-full", "h-1/2")
 
   // Texts
   const hiCx = cx(
     "Hi",
     "w-0 sm:w-2/3", // force one line
-    "text-6xl mm:text-7xl font-black leading-none",
+    "text-5xl mm:text-7xl font-black leading-none",
     // Light
     "text-neutral-800 [&_strong]:text-neutral-500",
     "dark:text-neutral-500 dark:[&_strong]:text-white"
@@ -33,15 +23,8 @@ export default function Header() {
     "text-4xl mm:text-5xl font-extralight"
   )
 
-  const imgCx = cx(
-    "BgImg",
-    "absolute z-0 top-0",
-    "w-full",
-    "h-[400px] max-h-[400px]"
-  )
-
   return (
-    <div className={mainCx} ref={ref}>
+    <div className={mainCx}>
       <div className="container relative z-10">
         <p className={hiCx}>
           Hi, <strong>you are great</strong>
@@ -54,9 +37,8 @@ export default function Header() {
         </p>
       </div>
 
-      <motion.img
-        className={imgCx}
-        style={{ y }}
+      <img
+        className={waveCx}
         src={src}
         width={width}
         height={height}

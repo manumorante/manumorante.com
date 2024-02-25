@@ -21,3 +21,21 @@ body {
   color: var(--foreground);
   background: var(--background);
 }
+
+.scroll-watcher {
+  position: fixed;
+  bottom: 0;
+  height: 4px;
+  z-index: 1000;
+  background-color: #404040;
+  width: 100%;
+  scale: 0 1;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}

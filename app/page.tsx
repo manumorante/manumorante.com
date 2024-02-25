@@ -6,6 +6,8 @@ import Projects from "@/components/Projects"
 export default function Home() {
   return (
     <main>
+      <div className="scroll-watcher"></div>
+
       <Header />
       <Projects />
 
