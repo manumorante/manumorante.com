@@ -16,7 +16,7 @@ export default function Project({ project }: { project: Project }) {
     "blur-3xl opacity-20"
   )
 
-  const coverCx = cx("Cover relative z-10 block w-full h-auto aspect-og mb-6")
+  const coverCx = cx("ProjectCover relative z-10 block w-full h-auto aspect-og mb-6")
   const nameCx = cx(
     "Name",
     "flex items-center gap-2",
