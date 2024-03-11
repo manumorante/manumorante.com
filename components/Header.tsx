@@ -4,7 +4,7 @@ const { src, width, height } = image
 import cx from "clsx"
 
 export default function Header() {
-  const mainCx = cx("Header w-full h-screen py-10 sm:py-16")
+  const mainCx = cx("Header w-full h-[80vh] py-10 sm:py-16")
   const textCx = cx("Text container relative z-10")
   const waveCx = cx("Wave", "absolute z-0 top-1/2 left-0", "w-full", "h-1/2")
 
