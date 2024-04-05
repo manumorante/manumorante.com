@@ -16,7 +16,6 @@
         "dark": "#630d00"
       }
     },
-
     {
       "name": "Mordisco Club",
       "id": "mordisco.club",
@@ -46,6 +45,22 @@
       "repository": "https://github.com/manumorante/polaroids",
       "colors": {
         "light": "#6e9ec8",
+        "dark": "#630d00"
+      }
+    },
+    {
+      "name": "Micro animaciones",
+      "id": "iconate",
+      "published": true,
+      "featured": true,
+      "image": "/projects/iconate.jpg",
+      "imageDark": "",
+      "description": "Perfecto para jugar con Framer Motion creando microinteracciones.",
+      "tags": ["css", "animation"],
+      "url": "https://iconate.vercel.app/",
+      "repository": "https://github.com/manumorante/iconate",
+      "colors": {
+        "light": "#6773a6",
         "dark": "#630d00"
       }
     },
