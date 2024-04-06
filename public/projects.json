@@ -1,10 +1,22 @@
 {
   "projects": [
     {
+      "name": "Git Commands",
+      "id": "git-commands",
+      "featured": true,
+      "image": "/projects/git-commands.png",
+      "description": "Quickly use and learn Git commands and Oh My Zsh alias.",
+      "tags": ["raycast", "git"],
+      "url": "https://www.raycast.com/manumorante/git-commands",
+      "repository": "https://github.com/raycast/extensions/tree/main/extensions/git-commands",
+      "colors": {
+        "light": "#84C4E1",
+        "dark": "#22407B"
+      }
+    },
+    {
       "name": "Minimalist Movie Posters",
       "id": "minimalist-movie-posters",
-      "published": true,
-      "featured": false,
       "image": "/projects/minimalist-movie-posters.jpg",
       "imageDark": "/projects/minimalist-movie-posters.dark.jpg",
       "description": "Carteles de cine minimalistas creados y animados por código.",
@@ -19,10 +31,7 @@
     {
       "name": "Mordisco Club",
       "id": "mordisco.club",
-      "published": true,
-      "featured": true,
       "image": "/projects/mordisco-club.jpg",
-      "imageDark": "",
       "description": "Club website.",
       "tags": ["club"],
       "url": "https://mordisco.club",
@@ -35,7 +44,6 @@
     {
       "name": "Polaroids",
       "id": "polaroids",
-      "published": true,
       "featured": true,
       "image": "/projects/polaroids.jpg",
       "imageDark": "/projects/polaroids.dark.jpg",
@@ -51,10 +59,8 @@
     {
       "name": "Micro animaciones",
       "id": "iconate",
-      "published": true,
       "featured": true,
-      "image": "/projects/iconate.jpg",
-      "imageDark": "",
+      "image": "/projects/iconate.png",
       "description": "Perfecto para jugar con Framer Motion creando microinteracciones.",
       "tags": ["css", "animation"],
       "url": "https://iconate.vercel.app/",
@@ -64,14 +70,10 @@
         "dark": "#630d00"
       }
     },
-
     {
       "name": "Scenic Movies",
       "id": "scenic",
-      "published": true,
-      "featured": false,
       "image": "/projects/scenic.jpg",
-      "imageDark": "",
       "description": "Mi versión de una web de cine con diseño inspirado en Letterboxd y que me ha servido para practicar con arquitecturas limpias.",
       "tags": ["movies", "cinema"],
       "url": "https://scenic.manumorante.com",
@@ -81,14 +83,10 @@
         "dark": "#630d00"
       }
     },
-
     {
       "name": "Galería de fotos Masonry",
       "id": "masonry",
-      "published": true,
-      "featured": false,
       "image": "/projects/masonry.jpg",
-      "imageDark": "",
       "description": "Una bonita galería de fotos que aprovecha las ventajas de CSS Grid.",
       "tags": ["css", "grid", "masonry"],
       "url": "https://masonry.manumorante.com",
@@ -97,10 +95,7 @@
     {
       "name": "Streets of Rage",
       "id": "sor",
-      "published": true,
-      "featured": false,
       "image": "/projects/sor.png",
-      "imageDark": "",
       "description": "Introducción del juego adorado Streets of Rage de Sega Megadrive creado y animado todo con código.",
       "tags": ["retro", "game", "css", "animation"],
       "url": "https://streets-of-rage.manumorante.com",
@@ -110,8 +105,6 @@
     {
       "name": "Mi mi mi",
       "id": "mimimi",
-      "published": true,
-      "featured": false,
       "image": "/projects/mimimi.jpg",
       "imageDark": "/projects/mimimi.dark.jpg",
       "description": "Convierte texto a \"mi mi mi\" y compártelo como enlace a alguien.",
@@ -126,8 +119,6 @@
     {
       "name": "Raycast DS Utility",
       "id": "raycast/ds-utilities",
-      "published": true,
-      "featured": true,
       "image": "/projects/ds-utilities.jpg",
       "imageDark": "/projects/ds-utilities.dark.jpg",
       "description": "Raycast Extension to manipulate DS Utilities classes.",
@@ -142,10 +133,7 @@
     {
       "name": "CSS Pen",
       "id": "csspen",
-      "published": true,
-      "featured": false,
       "image": "/projects/csspen.png",
-      "imageDark": "",
       "description": "Logos famosos en animación paso a paso con CSS.",
       "tags": ["learning", "css", "animation"],
       "url": "",
@@ -154,31 +142,6 @@
         "light": "#3b5998",
         "dark": "#630d00"
       }
-    },
-
-    {
-      "name": "Raycast Domestika",
-      "id": "raycast/domestika",
-      "published": false,
-      "featured": false,
-      "image": "",
-      "imageDark": "",
-      "description": "Intranet extension to use our Domestika API.",
-      "tags": ["raycast", "tool", "productivity"],
-      "url": "",
-      "repository": ""
-    },
-    {
-      "name": "Sofía Rocha",
-      "id": "sofiarocha",
-      "published": false,
-      "featured": false,
-      "image": "",
-      "imageDark": "",
-      "description": "Portafolio personal de Sofía Rocha.",
-      "tags": ["portfolio", "cv"],
-      "url": "https://sofiarocha.es",
-      "repository": "https://github.com/manumorante/sofiarocha"
     }
   ]
 }

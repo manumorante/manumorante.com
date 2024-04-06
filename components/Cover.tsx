@@ -12,9 +12,7 @@ export default function Cover({
 }) {
   if (!image) return null
 
-  const baseCx = cx(
-    "Cover relative z-10 object-center rounded-lg sm:rounded-2xl overflow-hidden"
-  )
+  const baseCx = cx("Cover relative z-10 object-center")
   const lightCx = cx(baseCx, { "block dark:hidden": imageDark })
   const darkCx = cx(baseCx, "hidden dark:block")
 

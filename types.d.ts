@@ -4,7 +4,11 @@ export interface Project {
   description: string
   url: string
   image: string
-  imageDark: string
+  imageDark?: string
+  colors?: {
+    light: string
+    dark: string
+  }
 }
 
 export interface Projects {
