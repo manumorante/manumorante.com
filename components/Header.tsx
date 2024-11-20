@@ -17,14 +17,14 @@ export default function Header() {
             loading="eager"
             alt="Manu Morante"
           />
-          <p className="text-4xl tracking-tight text-neutral-800 font-extrabold leading-none">
+          <p className="text-4xl tracking-tight text-neutral-800 dark:text-neutral-200 font-extrabold leading-none">
             Manu Morante <br />
             <strong className="text-neutral-500 font-extrabold">
               Frontend developer
             </strong>
           </p>
 
-          <p className="text-2xl font-light max-w-sm">
+          <p className="text-2xl dark:text-neutral-200 font-light max-w-sm">
             Extensive experience in both product-based companies, focusing on
             scalable components, and consulting firms, where speed and
             reusability have been prioritized.

@@ -5,8 +5,8 @@
       "id": "git-commands",
       "featured": true,
       "image": "/projects/git-commands.png",
-      "description": "Quickly use and learn Git commands and Oh My Zsh alias.",
-      "tags": ["raycast", "git"],
+      "description": "Quickly use and learn Git commands and Oh My Zsh alias. Over 3,000 installations",
+      "tags": ["TypeScript", "Raycast", "Git", "Oh My Zsh"],
       "url": "https://www.raycast.com/manumorante/git-commands",
       "repository": "https://github.com/raycast/extensions/tree/main/extensions/git-commands",
       "colors": {
@@ -20,7 +20,7 @@
       "image": "/projects/minimalist-movie-posters.jpg",
       "imageDark": "/projects/minimalist-movie-posters.dark.jpg",
       "description": "Carteles de cine minimalistas creados y animados por código.",
-      "tags": ["movies", "css", "animation"],
+      "tags": ["React", "Tailwind", "CSS", "Animation", "movies"],
       "url": "https://posters.manumorante.com",
       "repository": "https://github.com/manumorante/minimalist-movie-posters",
       "colors": {
@@ -29,11 +29,32 @@
       }
     },
     {
+      "name": "CSS Pen",
+      "id": "csspen",
+      "image": "/projects/csspen.png",
+      "description": "Logos famosos en animación paso a paso con CSS.",
+      "tags": [
+        "Next",
+        "Supabase",
+        "TypeScript",
+        "Tailwind",
+        "CSS",
+        "Animation",
+        "Learning tool"
+      ],
+      "url": "https://csspen.es",
+      "repository": "https://github.com/manumorante/csspen.es",
+      "colors": {
+        "light": "#3b5998",
+        "dark": "#630d00"
+      }
+    },
+    {
       "name": "Mordisco Club",
       "id": "mordisco.club",
       "image": "/projects/mordisco-club.jpg",
-      "description": "Club website.",
-      "tags": ["club"],
+      "description": "Galería online para organizar y mostrar las fotos que tomamos en esa fiesta.",
+      "tags": ["Next", "Typescript", "Cloudinary", "Tailwind", "Masonry"],
       "url": "https://mordisco.club",
       "repository": "https://github.com/manumorante/mordisco.club",
       "colors": {
@@ -48,7 +69,7 @@
       "image": "/projects/polaroids.jpg",
       "imageDark": "/projects/polaroids.dark.jpg",
       "description": "Bonitas fotos estilo polaroid expuestas desordenadamente sobre una mesa.",
-      "tags": ["photo", "css", "grid"],
+      "tags": ["React", "Vite", "Tailwind", "CSS grid", "gallery tool"],
       "url": "https://polaroids.manumorante.com",
       "repository": "https://github.com/manumorante/polaroids",
       "colors": {
@@ -62,7 +83,7 @@
       "featured": true,
       "image": "/projects/iconate.png",
       "description": "Perfecto para jugar con Framer Motion creando microinteracciones.",
-      "tags": ["css", "animation"],
+      "tags": ["React", "Framer Motion", "Tailwind", "Heroicons", "Clsx"],
       "url": "https://iconate.vercel.app/",
       "repository": "https://github.com/manumorante/iconate",
       "colors": {
@@ -75,7 +96,7 @@
       "id": "scenic",
       "image": "/projects/scenic.jpg",
       "description": "Mi versión de una web de cine con diseño inspirado en Letterboxd y que me ha servido para practicar con arquitecturas limpias.",
-      "tags": ["movies", "cinema"],
+      "tags": ["React", "clean-architecture"],
       "url": "https://scenic.manumorante.com",
       "repository": "https://github.com/manumorante/scenic",
       "colors": {
@@ -88,7 +109,7 @@
       "id": "masonry",
       "image": "/projects/masonry.jpg",
       "description": "Una bonita galería de fotos que aprovecha las ventajas de CSS Grid.",
-      "tags": ["css", "grid", "masonry"],
+      "tags": ["React", "Vite", "css", "grid", "masonry"],
       "url": "https://masonry.manumorante.com",
       "repository": "https://github.com/manumorante/masonry"
     },
@@ -108,7 +129,7 @@
       "image": "/projects/mimimi.jpg",
       "imageDark": "/projects/mimimi.dark.jpg",
       "description": "Convierte texto a \"mi mi mi\" y compártelo como enlace a alguien.",
-      "tags": ["funny", "mimificador"],
+      "tags": ["Rect", "TypeScript", "funny", "mimificador"],
       "url": "https://mimimi.manumorante.com",
       "repository": "https://github.com/manumorante/mimimi",
       "colors": {
@@ -127,19 +148,6 @@
       "repository": "https://github.com/manumorante/raycast-ds-utilities",
       "colors": {
         "light": "#e7c2b5",
-        "dark": "#630d00"
-      }
-    },
-    {
-      "name": "CSS Pen",
-      "id": "csspen",
-      "image": "/projects/csspen.png",
-      "description": "Logos famosos en animación paso a paso con CSS.",
-      "tags": ["learning", "css", "animation"],
-      "url": "",
-      "repository": "https://github.com/manumorante/csspen.es",
-      "colors": {
-        "light": "#3b5998",
         "dark": "#630d00"
       }
     }

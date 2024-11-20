@@ -4,6 +4,8 @@ export interface Project {
   description: string
   url: string
   image: string
+  repository: string
+  tags: Array<string>
   imageDark?: string
   colors?: {
     light: string
