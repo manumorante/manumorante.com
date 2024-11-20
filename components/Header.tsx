@@ -1,44 +1,36 @@
-import image from "../public/wave-sm.png"
-const { src, width, height } = image
+import Image from "next/image"
 
 import cx from "clsx"
 
 export default function Header() {
-  const mainCx = cx("Header w-full h-[60vh] py-10 sm:py-16")
-  const textCx = cx("Text container relative z-10")
-  const waveCx = cx("Wave", "absolute z-0 top-1/3 left-0", "w-full", "h-1/2")
-
-  // Texts
-  const hiCx = cx(
-    "w-0 sm:w-2/3", // force one line
-    "text-5xl mm:text-7xl font-black leading-none",
-    // Light
-    "text-neutral-800 [&_strong]:text-neutral-500",
-    "dark:text-neutral-500 dark:[&_strong]:text-white"
-  )
-  const lookCx = cx("pt-20 sm:py-24", "text-4xl mm:text-5xl font-extralight")
+  const mainCx = cx("Header w-full py-10 sm:py-16")
 
   return (
     <div className={mainCx}>
-      <div className={textCx}>
-        <p className={hiCx}>
-          Hi, <strong>you are great</strong>
-        </p>
+      <div className="container relative z-10">
+        <div className="space-y-8">
+          <Image
+            className="Avatar block w-24 h-24 rounded-full"
+            src="https://secure.gravatar.com/avatar/3d6f5d17df19913a7a7970923563710e?s=256"
+            width={128}
+            height={128}
+            loading="eager"
+            alt="Manu Morante"
+          />
+          <p className="text-4xl tracking-tight text-neutral-800 font-extrabold leading-none">
+            Manu Morante <br />
+            <strong className="text-neutral-500 font-extrabold">
+              Frontend developer
+            </strong>
+          </p>
 
-        <p className={lookCx}>
-          Now that you are here,
-          <br />
-          have a look
-        </p>
+          <p className="text-2xl font-light max-w-sm">
+            Extensive experience in both product-based companies, focusing on
+            scalable components, and consulting firms, where speed and
+            reusability have been prioritized.
+          </p>
+        </div>
       </div>
-
-      <img
-        className={waveCx}
-        src={src}
-        width={width}
-        height={height}
-        alt="Background"
-      />
     </div>
   )
 }

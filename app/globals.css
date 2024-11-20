@@ -30,19 +30,19 @@ body {
   .scroll-watcher {
     display: block;
     position: fixed;
-    top: 0;
+    left: 0;
+    bottom: 0;
     height: 4px;
     z-index: 1000;
     background-color: #404040;
-    width: 100%;
-    scale: 0 1;
+    width: 0%;
     animation: scroll-watcher linear;
     animation-timeline: scroll();
   }
 
   @keyframes scroll-watcher {
     to {
-      scale: 1 1;
+      width: 100%;
     }
   }
 

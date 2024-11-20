@@ -18,11 +18,10 @@ function Item({
   const mainCx = cx(
     "Item", //
     "flex items-center gap-3",
-    "font-medium",
-    "sm:opacity-50 sm:hover:opacity-80"
+    "font-medium"
   )
 
-  const nameCx = cx("Name text-base font-light overflow-hidden")
+  const nameCx = cx("Name text-base  overflow-hidden")
   return (
     <a href={href} target="blank" rel="noopener" className={mainCx}>
       <span className="w-6 h-6">{icon}</span>
