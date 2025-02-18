@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css"
 
 export const metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({
     <html lang="es">
       <body className="font-sans antialiased text-gray-800 min-h-full">
         {children}
+        <SpeedInsights />
       </body>
     </html>
   )
