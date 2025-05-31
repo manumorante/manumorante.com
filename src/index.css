@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+:root {
+  --foreground: var(--color-gray-800);
+  --background: var(--color-gray-200);
+  --primary: var(--color-blue-500);
+  --neutral: var(--color-gray-500);
+}
+
+@theme {
+  --aspect-og: 1200/628;
+  --color-primary: var(--color-blue-500);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #fff;
+    --background: #000;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}

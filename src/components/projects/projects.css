@@ -1,0 +1,18 @@
+@supports (animation-timeline: scroll()) {
+  .ProjectCover {
+    width: 100%;
+    scale: 0.8;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range-start: entry;
+    animation-range-end: contain 100px;
+  }
+
+  @keyframes fade-in {
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+}
