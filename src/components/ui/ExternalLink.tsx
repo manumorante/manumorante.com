@@ -7,7 +7,7 @@ type ExternalLinkProps = {
   children: React.ReactNode
 }
 
-export function ExternalLink({ className, children, href }: ExternalLinkProps) {
+export default function ExternalLink({ className, children, href }: ExternalLinkProps) {
   return (
     <a
       href={href}
