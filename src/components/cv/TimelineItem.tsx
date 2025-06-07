@@ -6,7 +6,7 @@ type TimelineItemProps = {
   endDate: string
   title: string
   subtitle?: string
-  description: ReactNode
+  children: ReactNode
 }
 
 export default function TimelineItem({
@@ -14,7 +14,7 @@ export default function TimelineItem({
   endDate,
   title,
   subtitle,
-  description,
+  children,
 }: TimelineItemProps) {
   const start: Date = new Date(startDate)
   const end: Date = new Date(endDate)
@@ -34,7 +34,7 @@ export default function TimelineItem({
         {title}
         {subtitle && <> - {subtitle}</>}
       </h5>
-      <p className="text-sm/relaxed text-gray-700 dark:text-gray-300">{description}</p>
+      <div className="text-sm/relaxed text-gray-700 dark:text-gray-300">{children}</div>
     </li>
   )
 }

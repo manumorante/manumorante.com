@@ -1,7 +1,7 @@
 import { WorkExperience } from '@/components/cv'
 import Info from '@/components/cv/Info'
 
-export default function Cv() {
+export default function CvPage() {
   return (
     <>
       <div className="min-h-dvh min-w-[320px] bg-white text-gray-800 dark:bg-gray-950 dark:text-gray-100">

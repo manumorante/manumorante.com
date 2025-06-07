@@ -1,25 +1,18 @@
 @import 'tailwindcss';
 
-:root {
-  --foreground: var(--color-gray-800);
-  --background: var(--color-gray-200);
-  --primary: var(--color-blue-500);
-  --neutral: var(--color-gray-500);
-}
-
 @theme {
   --aspect-og: 1200/628;
   --color-primary: var(--color-blue-500);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: #fff;
-    --background: #000;
-  }
+body {
+  @apply bg-gray-200 text-gray-800;
+  @apply dark:bg-black dark:text-white;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
+@layer utilities {
+  .main-container {
+    @apply mx-auto flex w-full max-w-5xl min-w-80;
+    @apply px-4 sm:px-6 lg:px-8;
+  }
 }
