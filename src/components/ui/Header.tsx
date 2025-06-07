@@ -1,3 +1,5 @@
+import { avatar } from '@/data/config'
+
 export default function Header() {
   return (
     <div className="Header w-full py-10 sm:py-16">
@@ -5,9 +7,9 @@ export default function Header() {
         <div className="space-y-8">
           <img
             className="Avatar block h-36 w-36 rounded-full"
-            src="https://www.gravatar.com/avatar/9ffd40e78c60ff6c30e110354ee28d360328ff5b5b16948f314363c24095da4e?size=288&d=initials"
-            width={128}
-            height={128}
+            src={avatar.medium}
+            width={144}
+            height={144}
             loading="eager"
             alt="Manu Morante"
           />
