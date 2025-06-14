@@ -1,3 +1,3 @@
-export { default as ProjectCard } from './ProjectCard'
-export { default as ProjectCover } from './ProjectCover'
-export { default as Projects } from './Projects'
+export { default as ProjectCard } from './ProjectCard/ProjectCard'
+export { default as ProjectCover } from './ProjectCover/ProjectCover'
+export { default as Projects } from './Projects/Projects'
