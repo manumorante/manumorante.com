@@ -1,4 +1,4 @@
-import type { Project } from './types'
+import type { Project } from '../types'
 
 export default function ProjectCover({ project }: { project: Project }) {
   if (!project.image) return null
