@@ -7,16 +7,10 @@ const CvPage = lazy(() => import('@/pages/CvPage/CvPage'))
 
 const router = createBrowserRouter([
   {
-    element: <MainLayout />,
+    Component: MainLayout,
     children: [
-      {
-        index: true,
-        element: <HomePage />,
-      },
-      {
-        path: 'cv',
-        element: <CvPage />,
-      },
+      { index: true, Component: HomePage },
+      { path: 'cv', Component: CvPage },
     ],
   },
 ])

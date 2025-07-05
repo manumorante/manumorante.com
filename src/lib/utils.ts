@@ -1,10 +1,3 @@
-import { clsx, type ClassValue } from 'clsx'
-import { twMerge } from 'tailwind-merge'
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
-}
-
 export function formatDuration(start: Date, end: Date): string {
   let years: number = end.getFullYear() - start.getFullYear()
   let months: number = end.getMonth() - start.getMonth()
