@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+@import './theme.css';
+
+@layer base {
+  body {
+    @apply text-light bg-lightest;
+    @apply dark:text-light dark:bg-darkest;
+  }
+}
+
+@layer utilities {
+  .main-container {
+    @apply mx-auto flex w-full max-w-5xl min-w-80;
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+}
