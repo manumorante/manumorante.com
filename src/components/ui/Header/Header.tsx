@@ -1,4 +1,5 @@
 import { avatar } from '@/data/config'
+import { cn } from '@/lib/cn'
 
 export default function Header() {
   return (
@@ -13,12 +14,19 @@ export default function Header() {
             loading="eager"
             alt="Manu Morante"
           />
-          <p className="text-4xl leading-none font-extrabold tracking-tight text-neutral-800 dark:text-neutral-200">
-            Manu Morante <br />
-            <strong className="font-extrabold text-neutral-500">Frontend developer</strong>
+          <p
+            className={cn(
+              'text-dark dark:text-lightest',
+              'text-4xl lg:text-5xl',
+              'leading-none font-bold tracking-tight',
+            )}>
+            Manu Morante{' '}
+            <strong className="text-accent dark:text-primary block font-light">
+              Frontend developer
+            </strong>
           </p>
 
-          <p className="max-w-lg text-2xl font-light dark:text-neutral-200">
+          <p className="max-w-lg text-2xl font-light">
             Extensive experience in both product-based companies, focusing on scalable components,
             and consulting firms, where speed and reusability have been prioritized.
           </p>

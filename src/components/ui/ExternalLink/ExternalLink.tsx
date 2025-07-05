@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/cn'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 
 type ExternalLinkProps = {
@@ -15,15 +15,15 @@ export default function ExternalLink({ className, children, href }: ExternalLink
       rel="noopener noreferrer"
       className={cn(
         // Base styles
-        'rounded-full px-3 py-1 text-sm font-medium',
+        'rounded-xl px-3 py-1 text-sm font-medium',
         'inline-flex items-center gap-1',
 
         // Light mode
         'bg-gray-50/80 text-gray-600 hover:bg-gray-50/100',
 
         // Dark mode
-        'dark:bg-gray-900/70 dark:text-gray-300 dark:hover:bg-gray-900/100',
-        'dark:backdrop-brightness-50',
+        'dark:bg-primary/70 dark:text-lightest dark:hover:bg-primary/100',
+        'transition-colors',
 
         // Custom classes
         className,

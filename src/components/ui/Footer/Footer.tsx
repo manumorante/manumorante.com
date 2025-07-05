@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/cn'
 import { BeakerIcon, BriefcaseIcon, CodeBracketIcon, PhotoIcon } from '@heroicons/react/24/outline'
 import type { ReactNode } from 'react'
 

@@ -1,0 +1,17 @@
+@theme {
+  /* Color brand */
+  --color-primary: #006d77ff; /* main actions*/
+  --color-secondary: #83c5beff; /* bg or secondary actions */
+  --color-background: #edf6f9ff; /* fondo principal */
+  --color-highlight: #ffddd2ff; /* resaltar texto o elementos */
+  --color-accent: #e29578ff; /* acentos gráficos y detalles */
+
+  /* Gray brand */
+  --color-darkest: #09090b;
+  --color-dark: #18181b;
+  --color-gray: #52525b;
+  --color-light: #d4d4d8;
+  --color-lightest: #fafafa;
+
+  --aspect-og: 1200/628;
+}

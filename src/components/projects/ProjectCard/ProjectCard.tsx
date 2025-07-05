@@ -21,8 +21,8 @@ export default function ProjectCard({ project }: { project: Project }) {
 
         {/* Información del proyecto */}
         <div className="sm:px-2">
-          <h3 className="text-xl font-medium">{name}</h3>
-          <h4 className="text-xl font-light">{description}</h4>
+          <h3 className="text-dark dark:text-lightest text-xl font-medium">{name}</h3>
+          <h4 className="text-gray dark:text-light text-xl font-light">{description}</h4>
         </div>
 
         {/* Etiquetas y enlace al repositorio */}
