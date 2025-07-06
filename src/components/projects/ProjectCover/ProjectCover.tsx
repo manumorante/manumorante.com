@@ -6,7 +6,7 @@ export default function ProjectCover({ project }: { project: Project }) {
   const imageDark = project.image.dark
 
   return (
-    <div className="ProjectCover aspect-og relative z-10 w-full overflow-hidden rounded-lg sm:rounded-2xl">
+    <div className="ProjectCover aspect-og relative z-10 w-full overflow-hidden sm:rounded-2xl">
       <picture>
         {imageDark && <source srcSet={imageDark} media="(prefers-color-scheme: dark)" />}
         <img
