@@ -1,5 +1,10 @@
 @import 'tailwindcss';
-@import './theme.css';
+
+@theme {
+  --color-*: initial;
+}
+
+@import '@estadologico/portfolio-theme/src/theme/all.css';
 
 @layer base {
   body {
