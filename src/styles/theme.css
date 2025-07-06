@@ -1,6 +1,6 @@
 @theme {
   /* Color brand */
-  --color-primary: #006d77ff; /* main actions*/
+  --color-primary: var(--color-emerald-600); /* main actions*/
   --color-secondary: #83c5beff; /* bg or secondary actions */
   --color-background: #edf6f9ff; /* fondo principal */
   --color-highlight: #ffddd2ff; /* resaltar texto o elementos */
