@@ -5,7 +5,7 @@ import { expect, it, vi } from 'vitest'
 vi.mock('@/components/projects/ProjectCover', () => ({ default: () => <div /> }))
 vi.mock('@/components/ui', () => ({
   Tag: ({ tag }: { tag: string }) => <span>{tag}</span>,
-  ExternalLink: ({ href }: { href: string }) => <a href={href}>View code</a>,
+  ButtonLink: ({ href }: { href: string }) => <a href={href}>View code</a>,
 }))
 
 it('renders project card', () => {

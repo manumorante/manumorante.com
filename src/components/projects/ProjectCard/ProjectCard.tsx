@@ -1,12 +1,21 @@
 import { ProjectCover } from '@/components/projects'
 import type { Project } from '@/components/projects/types'
-import { ExternalLink, Tag } from '@/components/ui'
+import { ButtonLink, Tags } from '@/components/ui'
+import { cn } from '@/lib/cn'
+import { cuteUrl } from '@/lib/utils'
+import { CodeBracketIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({
+  project,
+  className,
+}: {
+  project: Project
+  className?: string
+}) {
   const { name, description, tags, repository, url, color } = project
 
   return (
-    <article className="relative grid place-items-center py-12 md:py-28">
+    <article className={cn('relative pb-14', className)}>
       {color.light && (
         <div
           className="pointer-events-none absolute inset-0 opacity-30 blur-[80px]"
@@ -14,26 +23,33 @@ export default function ProjectCard({ project }: { project: Project }) {
         />
       )}
 
-      <div className="relative z-10 container mx-auto space-y-5">
-        <a className="block" href={url} target="_blank" rel="noopener noreferrer">
+      <div className="relative z-10">
+        <div className="sm:container">
           <ProjectCover project={project} />
-        </a>
+        </div>
 
         {/* Información del proyecto */}
-        <div className="sm:px-2">
-          <h3 className="text-dark dark:text-lightest text-xl font-medium">{name}</h3>
-          <h4 className="text-gray dark:text-light text-xl font-light">{description}</h4>
+        <div className="container mt-10 mb-6">
+          <h3 className="text-dark dark:text-lightest text-2xl font-medium">{name}</h3>
+          <h4 className="dark:text-light text-xl font-light">{description}</h4>
         </div>
 
         {/* Etiquetas y enlace al repositorio */}
-        <div className="flex flex-col items-start justify-between gap-6 sm:flex-row">
-          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-            {tags.map((tag) => (
-              <Tag key={tag} tag={tag} />
-            ))}
-          </div>
+        <div className="px-5 sm:container">
+          <Tags tags={tags} />
+        </div>
 
-          {repository && <ExternalLink href={repository}>View code</ExternalLink>}
+        <div className="container">
+          <div className="border-t-primary mt-6 flex w-full flex-col gap-3 border-t-3 pt-2">
+            <div className="border-separate"></div>
+            <ButtonLink href={url} icon={<GlobeAltIcon />}>
+              {cuteUrl(url)}
+            </ButtonLink>
+
+            <ButtonLink href={repository} icon={<CodeBracketIcon />}>
+              View code
+            </ButtonLink>
+          </div>
         </div>
       </div>
     </article>
