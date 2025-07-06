@@ -1,5 +1,7 @@
-export { default as ExternalLink } from './ExternalLink/ExternalLink';
-export { default as Footer } from './Footer/Footer';
-export { default as Header } from './Header/Header';
-export { default as MetaTags } from './MetaTags/MetaTags';
-export { default as Tag } from './Tag/Tag';
+export { default as Avatar } from './Avatar/Avatar'
+export { default as ButtonLink } from './ButtonLink/ButtonLink'
+export { default as Footer } from './Footer/Footer'
+export { default as Header } from './Header/Header'
+export { default as MetaTags } from './MetaTags/MetaTags'
+export { default as Tag } from './Tag/Tag'
+export { default as Tags } from './Tags/Tags'
