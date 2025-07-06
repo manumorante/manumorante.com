@@ -20,3 +20,21 @@ export function formatDuration(start: Date, end: Date): string {
 
   return duration
 }
+
+export function cuteUrl(url: string) {
+  // Eliminar protocolo si existe
+  let result = url.replace(/^https?:\/\//, '')
+
+  // Eliminar www. si existe
+  result = result.replace(/^www\./, '')
+
+  // Eliminar todo después de ? o #
+  result = result.split(/[?#]/)[0]
+
+  // Eliminar la barra final si existe
+  if (result.endsWith('/')) {
+    result = result.slice(0, -1)
+  }
+
+  return result
+}
