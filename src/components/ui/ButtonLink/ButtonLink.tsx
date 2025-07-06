@@ -1,14 +1,14 @@
 import { cn } from '@/lib/cn'
 import type { ReactNode } from 'react'
 
-type ExternalLinkProps = {
+type ButtonLinkProps = {
   href: string
   className?: string
   children: ReactNode
   icon?: ReactNode
 }
 
-export default function ButtonLink({ className, children, href, icon }: ExternalLinkProps) {
+export default function ButtonLink({ className, children, href, icon }: ButtonLinkProps) {
   if (!href) return null
 
   return (

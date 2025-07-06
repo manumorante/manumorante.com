@@ -4,8 +4,10 @@ import { expect, it, vi } from 'vitest'
 
 vi.mock('@/components/projects/ProjectCover', () => ({ default: () => <div /> }))
 vi.mock('@/components/ui', () => ({
-  Tag: ({ tag }: { tag: string }) => <span>{tag}</span>,
-  ButtonLink: ({ href }: { href: string }) => <a href={href}>View code</a>,
+  Tags: ({ tags }: { tags: string[] }) => <span>{tags}</span>,
+  ButtonLink: ({ href, children }: { href: string; children: React.ReactNode }) => (
+    <a href={href}>{children}</a>
+  ),
 }))
 
 it('renders project card', () => {
@@ -27,5 +29,6 @@ it('renders project card', () => {
   expect(screen.getByText('Test Project')).toBeInTheDocument()
   expect(screen.getByText('Test Description')).toBeInTheDocument()
   expect(screen.getByText('React')).toBeInTheDocument()
+  expect(screen.getByText('test.com')).toBeInTheDocument()
   expect(screen.getByText('View code')).toBeInTheDocument()
 })
