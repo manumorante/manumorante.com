@@ -18,7 +18,8 @@ export default function ButtonLink({ className, children, href, icon }: External
       rel="noopener noreferrer"
       className={cn(
         'flex w-full items-center gap-2',
-        'text-gray/70 hover:text-gray/100 text-lg font-medium',
+        'text-lg font-medium opacity-70 hover:opacity-100',
+        'transition-opacity',
         className,
       )}>
       {icon && <span className="h-6 w-6 shrink-0">{icon}</span>}
