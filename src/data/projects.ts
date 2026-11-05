@@ -13,7 +13,7 @@ export const projects: Project[] = [
     },
     description:
       'A completely scientific, fan-made quiz. Every answer is valid. The result is inevitable.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'Animation', 'Quiz', 'i18n'],
+    tags: ['AI', 'Claude', 'Vanilla JS', 'CSS', 'Animation'],
     url: 'https://should-i-play-zelda.vercel.app',
     repository: 'https://github.com/manumorante/should-i-play-zelda',
     featured: true,
