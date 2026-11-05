@@ -2,6 +2,23 @@ import type { Project } from '@/components/projects/types'
 
 export const projects: Project[] = [
   {
+    id: 'should-i-play-zelda',
+    name: 'Should I play Zelda?',
+    image: {
+      light: '/projects/should-i-play-zelda.jpg',
+    },
+    color: {
+      light: '#1f6440',
+      dark: '#04120b',
+    },
+    description:
+      'A completely scientific, fan-made quiz. Every answer is valid. The result is inevitable.',
+    tags: ['AI', 'Claude', 'Vanilla JS', 'CSS', 'Animation'],
+    url: 'https://should-i-play-zelda.vercel.app',
+    repository: 'https://github.com/manumorante/should-i-play-zelda',
+    featured: true,
+  },
+  {
     id: 'git-commands',
     name: 'Git Commands',
     image: {

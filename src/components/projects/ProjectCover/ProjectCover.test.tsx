@@ -8,3 +8,9 @@ it('renders project cover', () => {
 
   expect(screen.getByRole('img')).toBeInTheDocument()
 })
+
+it('links the cover to the project url', () => {
+  render(<ProjectCover project={mockProject} />)
+
+  expect(screen.getByRole('link')).toHaveAttribute('href', mockProject.url)
+})
