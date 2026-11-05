@@ -19,9 +19,8 @@ export default function Header() {
         </p>
 
         <p className="[&_b]:text-primary max-w-lg text-xl font-light sm:text-2xl [&_b]:font-bold">
-          I've learned that real value lies in those who know how to <b>build</b> relationships,{' '}
-          <b>share</b> knowledge and <b>grow together with others</b>, not just in those who master
-          the technology of the moment.
+          I've learned that an interface has to work well and <b>feel right</b>. I connect design
+          and code, build my own tools <b>with AI</b>, and <b>share what I learn</b> with the team.
         </p>
       </div>
     </div>
