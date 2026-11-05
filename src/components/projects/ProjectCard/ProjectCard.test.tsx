@@ -16,7 +16,7 @@ it('renders project card', () => {
       project={{
         id: 'test',
         name: 'Test Project',
-        description: 'Test Description',
+        description: { en: 'Test Description', es: 'Descripción' },
         tags: ['React'],
         url: 'https://test.com',
         repository: 'https://github.com/test',
