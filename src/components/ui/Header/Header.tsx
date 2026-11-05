@@ -6,7 +6,12 @@ export default function Header() {
   return (
     <div className="Header min-h-[80vh] w-full py-14 sm:pt-16 sm:pb-20">
       <div className="container space-y-8">
-        <Avatar />
+        <div className="flex items-start justify-between">
+          <Avatar />
+          <a href={lang === 'es' ? '/' : '/es'} className="text-primary font-medium">
+            {lang === 'es' ? 'English' : 'Español'}
+          </a>
+        </div>
         <p
           className={cn(
             'text-dark dark:text-lightest',
@@ -34,10 +39,6 @@ export default function Header() {
             </>
           )}
         </p>
-
-        <a href={lang === 'es' ? '/' : '/es'} className="text-primary font-medium">
-          {lang === 'es' ? 'English' : 'Español'}
-        </a>
       </div>
     </div>
   )
