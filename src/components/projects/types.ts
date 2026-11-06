@@ -1,3 +1,5 @@
+import type { Lang } from '@/lib/lang'
+
 type ProjectImage = {
   light: string
   dark?: string
@@ -13,7 +15,7 @@ export type Project = {
   name: string
   image: ProjectImage
   color: ProjectColor
-  description: string
+  description: Record<Lang, string>
   tags: string[]
   url: string
   repository: string

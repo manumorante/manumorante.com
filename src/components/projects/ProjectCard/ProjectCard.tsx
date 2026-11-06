@@ -2,6 +2,7 @@ import { ProjectCover } from '@/components/projects'
 import type { Project } from '@/components/projects/types'
 import { ButtonLink, Tags } from '@/components/ui'
 import { cn } from '@/lib/cn'
+import { lang } from '@/lib/lang'
 import { cuteUrl } from '@/lib/utils'
 import { CodeBracketIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
 
@@ -31,7 +32,7 @@ export default function ProjectCard({
         {/* Información del proyecto */}
         <div className="container mt-10 mb-6">
           <h3 className="text-dark dark:text-lightest text-2xl font-medium">{name}</h3>
-          <h4 className="dark:text-light text-xl font-light">{description}</h4>
+          <h4 className="dark:text-light text-xl font-light">{description[lang]}</h4>
         </div>
 
         {/* Etiquetas y enlace al repositorio */}
@@ -47,7 +48,7 @@ export default function ProjectCard({
             </ButtonLink>
 
             <ButtonLink href={repository} icon={<CodeBracketIcon />}>
-              View code
+              {lang === 'es' ? 'Ver código' : 'View code'}
             </ButtonLink>
           </div>
         </div>
