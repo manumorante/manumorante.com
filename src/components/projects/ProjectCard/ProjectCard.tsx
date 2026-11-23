@@ -1,10 +1,10 @@
-import { ProjectCover } from '@/components/projects'
+import { ProjectCover, ProjectLinks } from '@/components/projects'
 import type { Project } from '@/components/projects/types'
-import { ButtonLink, Tags } from '@/components/ui'
+import { Tags } from '@/components/ui'
 import { cn } from '@/lib/cn'
-import { lang } from '@/lib/lang'
-import { cuteUrl } from '@/lib/utils'
-import { CodeBracketIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
+import { lang, localePath } from '@/lib/lang'
+import { ArrowRightIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router'
 
 export default function ProjectCard({
   project,
@@ -13,10 +13,11 @@ export default function ProjectCard({
   project: Project
   className?: string
 }) {
-  const { name, description, tags, repository, url, color } = project
+  const { id, name, description, tags, url, color, page } = project
+  const pagePath = localePath(`/projects/${id}`)
 
   return (
-    <article className={cn('relative pb-14', className)}>
+    <article id={id} className={cn('relative pb-14', className)}>
       {color.light && (
         <div
           className="pointer-events-none absolute inset-0 opacity-30 blur-[80px]"
@@ -26,33 +27,39 @@ export default function ProjectCard({
 
       <div className="relative z-10">
         <div className="sm:container">
-          <ProjectCover project={project} />
+          {page ? (
+            <Link to={pagePath} className="block">
+              <ProjectCover project={project} />
+            </Link>
+          ) : (
+            <a className="block" href={url} target="_blank" rel="noopener noreferrer">
+              <ProjectCover project={project} />
+            </a>
+          )}
         </div>
 
-        {/* Información del proyecto */}
         <div className="container mt-10 mb-6">
-          <h3 className="text-dark dark:text-lightest text-2xl font-medium">{name}</h3>
+          <h3 className="text-dark dark:text-lightest text-2xl font-medium">
+            {page ? <Link to={pagePath}>{name}</Link> : name}
+          </h3>
           <h4 className="dark:text-light text-xl font-light">{description[lang]}</h4>
         </div>
 
-        {/* Etiquetas y enlace al repositorio */}
         <div className="px-5 sm:container">
           <Tags tags={tags} />
         </div>
 
-        <div className="container">
-          <div className="border-t-primary mt-6 flex w-full flex-col gap-3 border-t-3 pt-2">
-            <div className="border-separate"></div>
-            <ButtonLink href={url} icon={<GlobeAltIcon />}>
-              {cuteUrl(url)}
-            </ButtonLink>
-
-            {repository && (
-              <ButtonLink href={repository} icon={<CodeBracketIcon />}>
-                {lang === 'es' ? 'Ver código' : 'View code'}
-              </ButtonLink>
-            )}
-          </div>
+        <div className="container mt-6">
+          {page ? (
+            <Link
+              to={pagePath}
+              className="border-t-primary text-primary flex items-center gap-2 border-t-3 pt-5 text-lg font-medium">
+              {lang === 'es' ? 'Ver proyecto' : 'View project'}
+              <ArrowRightIcon className="h-5 w-5" />
+            </Link>
+          ) : (
+            <ProjectLinks project={project} />
+          )}
         </div>
       </div>
     </article>
