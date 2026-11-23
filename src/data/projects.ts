@@ -188,25 +188,6 @@ export const projects: Project[] = [
     repository: 'https://github.com/manumorante/streets-of-rage',
   },
   {
-    id: 'mimimi',
-    name: 'Mi mi mi',
-    image: {
-      light: '/projects/mimimi.jpg',
-      dark: '/projects/mimimi.dark.jpg',
-    },
-    color: {
-      light: '#dec38a',
-      dark: '#630d00',
-    },
-    description: {
-      en: 'Turns text into "mi mi mi" so you can share it as a link.',
-      es: 'Convierte texto a "mi mi mi" y compártelo como enlace a alguien.',
-    },
-    tags: ['Rect', 'TypeScript', 'funny', 'mimificador'],
-    url: 'https://mimimi.manumorante.com',
-    repository: 'https://github.com/manumorante/mimimi',
-  },
-  {
     id: 'raycast/ds-utilities',
     name: 'Raycast DS Utility',
     image: {
