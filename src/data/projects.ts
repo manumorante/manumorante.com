@@ -50,8 +50,8 @@ export const projects: Project[] = [
       dark: '#22407B',
     },
     description: {
-      en: 'Quickly use and learn Git commands and Oh My Zsh alias. Over 4,800 installations',
-      es: 'Usa y aprende comandos de Git y alias de Oh My Zsh en un momento. Más de 4.800 instalaciones',
+      en: 'Quickly use and learn Git commands and Oh My Zsh alias. Over 10,800 installations',
+      es: 'Usa y aprende comandos de Git y alias de Oh My Zsh en un momento. Más de 10.800 instalaciones',
     },
     tags: ['TypeScript', 'Raycast', 'Git', 'Oh My Zsh'],
     url: 'https://www.raycast.com/manumorante/git-commands',
