@@ -18,7 +18,7 @@ export type Project = {
   description: Record<Lang, string>
   tags: string[]
   url: string
-  repository: string
+  repository?: string
   featured?: boolean
 }
 
