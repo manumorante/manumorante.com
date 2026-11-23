@@ -11,3 +11,5 @@ English at `/`, Spanish at `/es` (`src/lib/lang.ts`); user-facing text needs bot
 - Each project is an entry in `src/data/projects.ts`; every entry is shown, in array order.
 - Covers live in `public/projects/` (`<id>.jpg`, optional `<id>.dark.jpg`).
 - Removing a project means deleting its entry and its cover files.
+
+- Adding a project: the `/add-project` skill (`.claude/skills/add-project/`).
