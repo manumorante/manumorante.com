@@ -1,4 +1,5 @@
 import type { Project } from '@/components/projects/types'
+import { gitCommands } from '@/data/pages/git-commands'
 import { ritmoFestival } from '@/data/pages/ritmo-festival'
 
 export const projects: Project[] = [
@@ -57,6 +58,7 @@ export const projects: Project[] = [
     url: 'https://www.raycast.com/manumorante/git-commands',
     repository: 'https://github.com/raycast/extensions/tree/main/extensions/git-commands',
     featured: true,
+    page: gitCommands,
   },
   {
     id: 'minimalist-movie-posters',
