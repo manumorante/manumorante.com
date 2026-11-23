@@ -17,7 +17,7 @@ function Item({ children, href }: ItemProps) {
 
 export default function Social() {
   return (
-    <footer>
+    <footer className="container">
       <div className="Social">
         <div
           className={cn(

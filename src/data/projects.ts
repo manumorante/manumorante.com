@@ -1,4 +1,5 @@
 import type { Project } from '@/components/projects/types'
+import { ritmoFestival } from '@/data/pages/ritmo-festival'
 
 export const projects: Project[] = [
   {
@@ -12,11 +13,12 @@ export const projects: Project[] = [
       dark: '#2a1a0c',
     },
     description: {
-      en: 'Official website of RIT/MO, an electronic music festival in Granada. I have built and run it since 2024: line-up, tickets, travel and accommodation, in Spanish and English.',
-      es: 'Web oficial de RIT/MO, festival de música electrónica en Granada. La desarrollo y mantengo desde 2024: cartel, entradas, cómo llegar y alojamiento, en español e inglés.',
+      en: 'Official website of RIT/MO, an electronic music festival in Granada. I have designed, built and run it since 2023: line-up, tickets, travel and accommodation, in Spanish and English.',
+      es: 'Web oficial de RIT/MO, festival de música electrónica en Granada. La diseño, desarrollo y mantengo desde 2023: cartel, entradas, cómo llegar y alojamiento, en español e inglés.',
     },
     tags: ['Next.js', 'next-intl', 'Tailwind', 'Framer Motion'],
     url: 'https://ritmofestival.com',
+    page: ritmoFestival,
   },
   {
     id: 'should-i-play-zelda',

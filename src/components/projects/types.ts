@@ -10,6 +10,28 @@ type ProjectColor = {
   dark: string
 }
 
+type Localized = Record<Lang, string>
+
+export type ProjectPageSection = {
+  title: Localized
+  body: Localized
+  image?: {
+    src: string
+    alt: Localized
+  }
+}
+
+export type ProjectPageStat = {
+  value: string
+  label: Localized
+}
+
+export type ProjectPageContent = {
+  intro: Localized
+  sections: ProjectPageSection[]
+  stats?: ProjectPageStat[]
+}
+
 export type Project = {
   id: string
   name: string
@@ -20,6 +42,7 @@ export type Project = {
   url: string
   repository?: string
   featured?: boolean
+  page?: ProjectPageContent
 }
 
 export type ProjectsData = {

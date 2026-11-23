@@ -1,6 +1,7 @@
 import { ProjectCard } from '@/components/projects'
 import { mockProject } from '@/test/projectMock'
 import { render, screen } from '@testing-library/react'
+import { MemoryRouter } from 'react-router'
 import { expect, it, vi } from 'vitest'
 
 vi.mock('@/components/projects/ProjectCover', () => ({ default: () => <div /> }))
@@ -38,4 +39,30 @@ it('hides the code link when the repository is private', () => {
   render(<ProjectCard project={{ ...mockProject, repository: undefined }} />)
 
   expect(screen.queryByText('View code')).not.toBeInTheDocument()
+})
+
+const page = { intro: { en: 'Intro', es: 'Intro' }, sections: [] }
+
+it('opens the project page when the project has one', () => {
+  render(
+    <MemoryRouter>
+      <ProjectCard project={{ ...mockProject, page }} />
+    </MemoryRouter>,
+  )
+
+  expect(screen.getByRole('link', { name: 'Test Project' })).toHaveAttribute('href', '/projects/test')
+  expect(screen.getByRole('link', { name: 'View project' })).toHaveAttribute('href', '/projects/test')
+  expect(screen.queryByText('test.com')).not.toBeInTheDocument()
+})
+
+it('links the cover to the live project when there is no page', () => {
+  const { container } = render(<ProjectCard project={mockProject} />)
+
+  expect(container.querySelector('a[target="_blank"][href="https://test.com"]')).toBeInTheDocument()
+})
+
+it('anchors the card by project id', () => {
+  const { container } = render(<ProjectCard project={mockProject} />)
+
+  expect(container.querySelector('article')).toHaveAttribute('id', 'test')
 })
