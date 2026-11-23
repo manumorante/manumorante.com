@@ -1,4 +1,5 @@
 import { ProjectCard } from '@/components/projects'
+import { mockProject } from '@/test/projectMock'
 import { render, screen } from '@testing-library/react'
 import { expect, it, vi } from 'vitest'
 
@@ -31,4 +32,10 @@ it('renders project card', () => {
   expect(screen.getByText('React')).toBeInTheDocument()
   expect(screen.getByText('test.com')).toBeInTheDocument()
   expect(screen.getByText('View code')).toBeInTheDocument()
+})
+
+it('hides the code link when the repository is private', () => {
+  render(<ProjectCard project={{ ...mockProject, repository: undefined }} />)
+
+  expect(screen.queryByText('View code')).not.toBeInTheDocument()
 })

@@ -47,9 +47,11 @@ export default function ProjectCard({
               {cuteUrl(url)}
             </ButtonLink>
 
-            <ButtonLink href={repository} icon={<CodeBracketIcon />}>
-              {lang === 'es' ? 'Ver código' : 'View code'}
-            </ButtonLink>
+            {repository && (
+              <ButtonLink href={repository} icon={<CodeBracketIcon />}>
+                {lang === 'es' ? 'Ver código' : 'View code'}
+              </ButtonLink>
+            )}
           </div>
         </div>
       </div>

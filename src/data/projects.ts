@@ -2,6 +2,23 @@ import type { Project } from '@/components/projects/types'
 
 export const projects: Project[] = [
   {
+    id: 'ritmo-festival',
+    name: 'RIT/MO Festival',
+    image: {
+      light: '/projects/ritmo-festival.jpg',
+    },
+    color: {
+      light: '#a4752a',
+      dark: '#2a1a0c',
+    },
+    description: {
+      en: 'Official website of RIT/MO, an electronic music festival in Granada. I have built and run it since 2024: line-up, tickets, travel and accommodation, in Spanish and English.',
+      es: 'Web oficial de RIT/MO, festival de música electrónica en Granada. La desarrollo y mantengo desde 2024: cartel, entradas, cómo llegar y alojamiento, en español e inglés.',
+    },
+    tags: ['Next.js', 'next-intl', 'Tailwind', 'Framer Motion'],
+    url: 'https://ritmofestival.com',
+  },
+  {
     id: 'should-i-play-zelda',
     name: 'Should I play Zelda?',
     image: {
