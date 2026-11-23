@@ -1,6 +1,6 @@
 ---
 name: add-project
-description: Add a project to the portfolio, or give an existing one its own page — research it, write its card and page in EN/ES and build its images.
+description: Add a new project to the portfolio — synthesize the idea, write its card and page in EN/ES and build its images.
 disable-model-invocation: true
 metadata:
   author: manumorante
@@ -44,9 +44,6 @@ confirms or corrects each one.
   and what came of it.
 
 ## 3. Card
-
-When giving an existing project a page, review its card too: description, color and cover may
-be outdated.
 
 - **Position**: first in the array, unless Manu says otherwise.
 - **Id**: used as the URL slug, so lowercase letters, digits and hyphens only.
