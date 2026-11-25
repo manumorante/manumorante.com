@@ -10,7 +10,7 @@ many more scroll-linked animations will be added.
 
 ## Decision
 
-Use Lenis with a single root instance (`<ReactLenis root>` in `src/router.tsx`).
+Use Lenis for page scroll.
 
 - Lenis drives the browser's own scroll, so sticky, anchors, accessibility and CSS scroll-driven
   animations keep working. Transform-based scrollers (Locomotive Scroll, GSAP ScrollSmoother)
@@ -22,8 +22,5 @@ Use Lenis with a single root instance (`<ReactLenis root>` in `src/router.tsx`).
 
 ## Consequences
 
-- Scroll-linked animations use CSS scroll-driven animations first. JS animations read the
-  instance with `useLenis`. With GSAP, Lenis runs on `gsap.ticker` (`autoRaf: false`), so there
-  is only one animation loop.
 - Accepted Lenis limitations: Safari caps it at 60fps, wheel smoothing stops over iframes, and
   CSS scroll-snap needs `lenis/snap`.
