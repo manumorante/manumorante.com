@@ -8,13 +8,13 @@ export default function ProjectLinks({ project }: { project: Project }) {
   const { url, repository } = project
 
   return (
-    <div className="border-t-primary flex w-full flex-col gap-3 border-t-3 pt-5">
-      <ButtonLink href={url} icon={<GlobeAltIcon />}>
+    <div className="flex border-t-(--project-color) w-full flex-col gap-3 border-t-3 pt-5">
+      <ButtonLink href={url} className="text-(--project-text)" icon={<GlobeAltIcon />}>
         {cuteUrl(url)}
       </ButtonLink>
 
       {repository && (
-        <ButtonLink href={repository} icon={<CodeBracketIcon />}>
+        <ButtonLink href={repository} className="text-(--project-text)" icon={<CodeBracketIcon />}>
           {lang === 'es' ? 'Ver código' : 'View code'}
         </ButtonLink>
       )}
