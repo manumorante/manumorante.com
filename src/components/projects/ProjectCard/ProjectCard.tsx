@@ -58,16 +58,18 @@ export default function ProjectCard({
         </div>
 
         <div className="container mt-6">
-          {page ? (
-            <Link
-              to={pagePath}
-              className="flex border-t-(--project-color) text-(--project-text) items-center gap-2 border-t-3 pt-5 text-lg font-medium">
-              {lang === 'es' ? 'Ver proyecto' : 'View project'}
-              <ArrowRightIcon className="h-5 w-5" />
-            </Link>
-          ) : (
-            <ProjectLinks project={project} />
-          )}
+          <div className="border-t-3 border-t-(--project-color) pt-5 text-(--project-text)">
+            {page ? (
+              <Link
+                to={pagePath}
+                className="flex items-center gap-2 text-lg font-medium opacity-70 transition-opacity hover:opacity-100">
+                {lang === 'es' ? 'Ver proyecto' : 'View project'}
+                <ArrowRightIcon className="h-5 w-5" />
+              </Link>
+            ) : (
+              <ProjectLinks project={project} />
+            )}
+          </div>
         </div>
       </div>
     </article>
