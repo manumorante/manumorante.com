@@ -1,3 +1,4 @@
+import { ReactLenis } from 'lenis/react'
 import { lazy } from 'react'
 import { createBrowserRouter, Outlet, RouterProvider, ScrollRestoration } from 'react-router'
 
@@ -8,6 +9,7 @@ const ProjectPage = lazy(() => import('@/pages/ProjectPage/ProjectPage'))
 function Root() {
   return (
     <>
+      <ReactLenis root options={{ autoRaf: true, anchors: true, stopInertiaOnNavigate: true }} />
       <ScrollRestoration />
       <Outlet />
     </>
