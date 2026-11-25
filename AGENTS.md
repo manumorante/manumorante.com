@@ -13,7 +13,7 @@ English at `/`, Spanish at `/es` (`src/lib/lang.ts`); user-facing text needs bot
 When unsure, it is not an ADR.
 
 ## Scroll and animations
-- One Lenis instance owns page scroll (`<ReactLenis root>` in `src/router.tsx`); touch keeps
+- Page scroll runs on Lenis (`<ReactLenis root>` in `src/router.tsx`); touch keeps
   native scroll. Why: `docs/decisions/0001-smooth-scroll-lenis.md`.
 - Scroll-linked animations: CSS scroll-driven (`animation-timeline`) first. JS animations read the
   instance with `useLenis`; with GSAP, set `autoRaf: false` and drive `lenis.raf` from `gsap.ticker`.
