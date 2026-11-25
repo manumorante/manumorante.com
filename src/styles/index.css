@@ -2,6 +2,13 @@
 
 @theme {
   --color-*: initial;
+
+  --animate-blink: blink 0.9s steps(1) infinite;
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
 }
 
 @import '@estadologico/portfolio-theme/src/theme/all.css';

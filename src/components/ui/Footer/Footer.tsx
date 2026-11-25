@@ -1,3 +1,4 @@
+import { HumanDisclaimer } from '@/components/ui'
 import { cn } from '@/lib/cn'
 import { BeakerIcon, BriefcaseIcon, CodeBracketIcon, PhotoIcon } from '@heroicons/react/24/outline'
 import type { ReactNode } from 'react'
@@ -48,7 +49,9 @@ export default function Social() {
       </div>
 
       <div className="py-10 sm:text-center">
-        <p>Manu Morante</p>
+        <p>
+          <HumanDisclaimer />
+        </p>
       </div>
     </footer>
   )
