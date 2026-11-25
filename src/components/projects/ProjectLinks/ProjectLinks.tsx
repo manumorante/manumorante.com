@@ -8,7 +8,7 @@ export default function ProjectLinks({ project }: { project: Project }) {
   const { url, repository } = project
 
   return (
-    <div className="border-t-primary flex w-full flex-col gap-3 border-t-3 pt-5">
+    <div className="flex flex-col gap-3">
       <ButtonLink href={url} icon={<GlobeAltIcon />}>
         {cuteUrl(url)}
       </ButtonLink>

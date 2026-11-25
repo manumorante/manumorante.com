@@ -17,7 +17,15 @@ export default function ProjectCard({
   const pagePath = localePath(`/projects/${id}`)
 
   return (
-    <article id={id} className={cn('relative pb-14', className)}>
+    <article
+      id={id}
+      className={cn(
+        'relative pb-14',
+        '[--project-text:oklch(from_var(--project-color)_0.45_c_h)]',
+        'dark:[--project-text:oklch(from_var(--project-color)_0.8_c_h)]',
+        className,
+      )}
+      style={{ '--project-color': color.light } as React.CSSProperties}>
       {color.light && (
         <div
           className="pointer-events-none absolute inset-0 opacity-30 blur-[80px]"
@@ -50,16 +58,18 @@ export default function ProjectCard({
         </div>
 
         <div className="container mt-6">
-          {page ? (
-            <Link
-              to={pagePath}
-              className="border-t-primary text-primary flex items-center gap-2 border-t-3 pt-5 text-lg font-medium">
-              {lang === 'es' ? 'Ver proyecto' : 'View project'}
-              <ArrowRightIcon className="h-5 w-5" />
-            </Link>
-          ) : (
-            <ProjectLinks project={project} />
-          )}
+          <div className="border-t-3 border-t-(--project-color) pt-5 text-(--project-text)">
+            {page ? (
+              <Link
+                to={pagePath}
+                className="flex items-center gap-2 text-lg font-medium opacity-70 transition-opacity hover:opacity-100">
+                {lang === 'es' ? 'Ver proyecto' : 'View project'}
+                <ArrowRightIcon className="h-5 w-5" />
+              </Link>
+            ) : (
+              <ProjectLinks project={project} />
+            )}
+          </div>
         </div>
       </div>
     </article>
